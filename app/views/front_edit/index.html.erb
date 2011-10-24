@@ -9,10 +9,17 @@ textarea {
   height: 500px;
   font-family: monospace;
 }
+#notice {
+  background-color: yellow;
+}
 
     </style>
   </head>
   <body>
+
+<% if flash[:notice] %>
+  <div id="notice"><%= flash[:notice] %></div>
+<% end %>
 
 <h1>Front edit</h1>
 
@@ -29,7 +36,17 @@ textarea {
   <input type="submit" value="load"/>
 </form>
 
-<textarea value="source"><%= @source %></textarea>
+<form action="<%=url_for(:action => :update)%>" method="post">
+  <input type="hidden" name="file" value="<%=params[:file]%>"/>
+  <textarea name='source'><%= @source %></textarea>
+  <br/>
+  Edit Message (optional): 
+  <input type="text" name="edit_message" value="" placeholder="Describe the edit " size="50"/>
+  <br/>
+  Edited By (required): 
+  <input type="text" name="commit_author" value="<%=session[:commit_author]%>" placeholder="Your Name <yourname@example.com>" size="50"/>
+  <input type="submit" value="update"/>
+</form>
 
 <hr/>
 
