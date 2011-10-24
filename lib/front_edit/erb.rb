@@ -29,9 +29,9 @@ module ActionView
 
           if template.identifier.index(Rails.root.to_s) == 0
 
-            source_file = template.identifier.sub(Rails.root.to_s + '/', '')
-            edit_link = "<div style='color:red'>#{source_file}</div> "
-            if erb =~ /^\s*<!DOCTYPE/  && erb =~ /<body[^>]*>/
+            source_file = FrontEdit.rel_path template.identifier
+            edit_link = "<div style='color:red'>#{FrontEdit.link(source_file)}</div> "
+            if erb =~ /^\s*<!DOCTYPE/ && erb =~ /<body[^>]*>/
               erb = erb.sub(/<body[^>]*>/, '\&' + edit_link)
             else
               erb = edit_link + erb

@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test</title>
+    <style>
+
+textarea {
+  width: 100%;
+  height: 400px;
+}
+    </style>
+  </head>
+  <body>
+
+
 
 <h1>Front edit</h1>
 
@@ -12,3 +27,18 @@ Sourc epath
 <%= @source %>
 </textarea>
 <p>Yaw</p>
+
+
+<hr/>
+<h4>Stylesheets</h4>
+
+
+<ul>
+<% @css.each do |s| %>
+  <li><%= FrontEdit.link s %></li>
+<% end %>
+</ul>
+
+
+  </body>
+</html>
