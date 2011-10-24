@@ -24,7 +24,7 @@ textarea {
   <%= @source_path %>
 </pre>
 
-<form>
+<form action="<%=url_for%>">
   <select name="file">
     <% FrontEdit.editables.each_pair do |k, v| %>
       <optgroup label="<%= k %>">
@@ -34,14 +34,12 @@ textarea {
       </optgroup>
     <% end %>
   </select>
+  <input type="submit" value="edit"/>
 </form>
 
-<textarea value="source">
-  <%= @source %>
-</textarea>
+<textarea value="source"><%= @source %></textarea>
 
 <hr/>
-
 
   </body>
 </html>
