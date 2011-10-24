@@ -5,9 +5,11 @@
     <style>
 
 textarea {
-  width: 100%;
-  height: 400px;
+  width: 80%;
+  height: 500px;
+  font-family: monospace;
 }
+
     </style>
   </head>
   <body>
@@ -18,26 +20,27 @@ textarea {
 
 <p>Hello World</p>
 
-Sourc epath
 <pre>
-<%= @source_path %>
+  <%= @source_path %>
 </pre>
 
-<textarea value="source">
-<%= @source %>
-</textarea>
-<p>Yaw</p>
+<form>
+  <select name="file">
+    <% FrontEdit.editables.each_pair do |k, v| %>
+      <optgroup label="<%= k %>">
+        <% v.each do |path| %>
+          <option value="<%= path %>"><%= FrontEdit.link(path)%></li>
+        <% end %>
+      </optgroup>
+    <% end %>
+  </select>
+</form>
 
+<textarea value="source">
+  <%= @source %>
+</textarea>
 
 <hr/>
-<h4>Stylesheets</h4>
-
-
-<ul>
-<% @css.each do |s| %>
-  <li><%= FrontEdit.link s %></li>
-<% end %>
-</ul>
 
 
   </body>
