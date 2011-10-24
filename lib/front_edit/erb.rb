@@ -27,8 +27,10 @@ module ActionView
 
           # added by erb_edit:
 
-          source_file = template.identifier.sub(Rails.root.to_s + '/', '')
-          erb = "<div style='color:red'>#{source_file}</div> " + erb
+          if template.identifier.index(Rails.root.to_s) == 0
+            source_file = template.identifier.sub(Rails.root.to_s + '/', '')
+            erb = "<div style='color:red'>#{source_file}</div> " + erb
+          end
 
           # end of addition
 
