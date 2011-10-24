@@ -28,8 +28,14 @@ module ActionView
           # added by erb_edit:
 
           if template.identifier.index(Rails.root.to_s) == 0
+
             source_file = template.identifier.sub(Rails.root.to_s + '/', '')
-            erb = "<div style='color:red'>#{source_file}</div> " + erb
+            edit_link = "<div style='color:red'>#{source_file}</div> "
+            if erb =~ /^\s*<!DOCTYPE/  && erb =~ /<body[^>]*>/
+              erb = erb.sub(/<body[^>]*>/, '\&' + edit_link)
+            else
+              erb = edit_link + erb
+            end
           end
 
           # end of addition
