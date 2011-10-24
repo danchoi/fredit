@@ -1,8 +1,18 @@
 http://coding.smashingmagazine.com/2011/06/23/a-guide-to-starting-your-own-rails-engine-gem/
 
 
-Restrict to html erb
 Front bend
 
 Can use this with Chris for small tweaks
+
+--------------------------------------------------------------------------------
+Template initialized with identifier /home/choi/projects/kf3/app/views/shared/_navigation.html.erb
+--------------------------------------------------------------------------------
+Template initialized with handler ActionView::Template::Handlers::ERB
+--------------------------------------------------------------------------------
+Template initialized with details {:virtual_path=>"shared/_navigation", :format=>:html}
+
+    attr_reader :source, :identifier, :handler, :virtual_path, :formats, :original_encoding
+
+
 

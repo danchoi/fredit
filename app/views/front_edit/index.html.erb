@@ -14,27 +14,19 @@ textarea {
   </head>
   <body>
 
-
-
 <h1>Front edit</h1>
-
-<p>Hello World</p>
-
-<pre>
-  <%= @source_path %>
-</pre>
 
 <form action="<%=url_for%>">
   <select name="file">
     <% FrontEdit.editables.each_pair do |k, v| %>
       <optgroup label="<%= k %>">
         <% v.each do |path| %>
-          <option value="<%= path %>"><%= FrontEdit.link(path)%></li>
+          <option value="<%= path %>" <%= params[:file] == path ? 'selected=\"selected\"' : nil %>><%= FrontEdit.link(path)%></li>
         <% end %>
       </optgroup>
     <% end %>
   </select>
-  <input type="submit" value="edit"/>
+  <input type="submit" value="load"/>
 </form>
 
 <textarea value="source"><%= @source %></textarea>

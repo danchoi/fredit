@@ -25,10 +25,9 @@ module ActionView
             erb = template.source.dup
           end
 
-          # added by erb_edit:
+          # begin FrontEdit patch
 
-          if template.identifier.index(Rails.root.to_s) == 0
-
+          if FrontEdit.template_editable?(template)
             source_file = FrontEdit.rel_path template.identifier
             edit_link = "<div style='color:red'>#{FrontEdit.link(source_file)}</div> "
             if erb =~ /^\s*<!DOCTYPE/ && erb =~ /<body[^>]*>/
@@ -38,7 +37,7 @@ module ActionView
             end
           end
 
-          # end of addition
+          # end FrontEdit patch
 
           self.class.erb_implementation.new(
             erb,
