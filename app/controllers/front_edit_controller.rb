@@ -23,7 +23,7 @@ class FrontEditController < ::ApplicationController
       return
     end
 
-    if params[:commit] == 'delete'
+    if params[:commit] =~ /delete/i
       `git rm #@path`
       flash[:notice] = "#@path deleted"
       `git commit --author='#{author}' -m '#{edit_msg}' #{@path}`
