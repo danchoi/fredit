@@ -1,3 +1,5 @@
 = FrontEdit
 
-This project rocks and uses MIT-LICENSE.
+To be written.
+
+This uses MIT-LICENSE.
