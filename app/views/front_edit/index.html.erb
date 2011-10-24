@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%=params[:file]%></title>
+    <title><%=@path%></title>
     <style>
 
 textarea {
@@ -28,7 +28,7 @@ textarea {
     <% FrontEdit.editables.each_pair do |k, v| %>
       <optgroup label="<%= k %>">
         <% v.each do |path| %>
-          <option value="<%= path %>" <%= params[:file] == path ? 'selected=\"selected\"' : nil %>><%= FrontEdit.link(path)%></li>
+          <option value="<%= path %>" <%= @path == path ? 'selected=\"selected\"' : nil %>><%= FrontEdit.link(path)%></li>
         <% end %>
       </optgroup>
     <% end %>
@@ -37,15 +37,31 @@ textarea {
 </form>
 
 <form action="<%=url_for(:action => :update)%>" method="post">
-  <input type="hidden" name="file" value="<%=params[:file]%>"/>
+  <input type="hidden" name="file" value="<%=@path%>"/>
   <textarea name='source'><%= @source %></textarea>
-  <br/>
-  Edit Message (optional): 
-  <input type="text" name="edit_message" value="" placeholder="Describe the edit " size="50"/>
-  <br/>
-  Edited By (required): 
-  <input type="text" name="commit_author" value="<%=session[:commit_author]%>" placeholder="Your Name <yourname@example.com>" size="50"/>
-  <input type="submit" value="update"/>
+
+  <table>
+    <tr>
+      <td>Edit Message (optional):</td>
+      <td>
+        <input type="text" name="edit_message" value="" placeholder="Describe the edit " size="50"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Edited By (required): </td>
+      <td>
+        <input type="text" name="commit_author" value="<%=session[:commit_author]%>" placeholder="Your Name <yourname@example.com>" size="50"/>
+      </td>
+    </tr>
+    <tr>
+      <td>File path:</td>
+      <td>
+        <input type="text" name="file_path" value="<%=@path%>" placeholder="File path" size="50"/>
+        <input type="submit" name="commit" value="delete"/>
+      </td>
+    </tr>
+  </table>
+  <input type="submit" name="commit" value="update"/>
 </form>
 
 <hr/>

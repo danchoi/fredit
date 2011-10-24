@@ -5,20 +5,14 @@ class FrontEditController < ::ApplicationController
   CSS_DIR = Rails.root + 'public/stylesheets/**/*.css'
   JS_DIR = Rails.root + 'public/javascripts/**/*.js'
 
-
   def index
-    @source_path = Rails.root + params[:file]
-    @source = File.read @source_path
+    @path ||= FrontEdit.editables[:views].first
+    @source = File.read(Rails.root + @path)
   end
 
   def update
-    @path = params[:file]
-    n = params[:source].gsub(/\r\n/, "\n")
-    File.open(@path, 'w') {|f| f.write(n)}
+    @path = params[:file_path]
 
-    # git commit
-
-    `git add #{@path}`
     edit_msg = !params[:edit_message].blank? ? params[:edit_message] : "unspecified edit"
 
     author = (session[:commit_author] = params[:commit_author])
@@ -28,10 +22,27 @@ class FrontEditController < ::ApplicationController
       render :action => 'index'
       return
     end
-    `git commit --author='#{author}' -m '#{edit_msg}' #{@path}`
 
+    if params[:commit] == 'delete'
+      `git rm #@path`
+      flash[:notice] = "#@path deleted"
+      `git commit --author='#{author}' -m '#{edit_msg}' #{@path}`
+      @path = nil
+    else
+      n = params[:source].gsub(/\r\n/, "\n")
+      File.open(@path, 'w') {|f| f.write(n)}
+      `git add #{@path}`
+      flash[:notice] = "#@path updated"
+      `git commit --author='#{author}' -m '#{edit_msg}' #{@path}`
+    end
     params.delete(:source)
-    flash[:notice] = "#@path updated"
-    redirect_to :action => 'index', :file => params[:file]
+
+    redirect_to :action => 'index', :file => @path
   end
+  
+  def create
+    @path = params[:file]
+    File.open(@path, 'w') {|f| f.write("REPLACE WITH CONTENT")}
+  end
+
 end
