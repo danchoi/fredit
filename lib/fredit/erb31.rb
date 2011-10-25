@@ -1,11 +1,8 @@
 module ActionView
   class Template
     module Handlers
-      class ERB < Handler
-        def compile(template)
-
-          # copied from original
-
+      class ERB 
+        def call(template)
           if template.source.encoding_aware?
             # First, convert to BINARY, so in case the encoding is
             # wrong, we can still find an encoding tag
@@ -38,13 +35,16 @@ module ActionView
 
           # end Fredit patch
 
+
           self.class.erb_implementation.new(
             erb,
             :trim => (self.class.erb_trim_mode == "-")
           ).src
+
         end
 
       end
     end
   end
 end
+

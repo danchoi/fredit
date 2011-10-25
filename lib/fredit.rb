@@ -1,4 +1,8 @@
-require 'fredit/erb'
+if Rails.version < '3.1.0'
+  require 'fredit/erb'
+else
+  require 'fredit/erb31'
+end
 require 'uri'
 
 module Fredit
