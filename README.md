@@ -1,8 +1,8 @@
 # fredit: front-end edit
 
-fredit is a simple, no-frills Rails Engine that lets you edit your Rails
-application's view templates, css stylesheets, and javascript files
-(a.k.a front-end files) through the browser.
+fredit is a very simple, no-frills Rails Engine that lets you edit your
+Rails application's view templates, css stylesheets, and javascript
+files (a.k.a front-end files) through the browser.
 
 fredit injects an edit link into every view template. These edit links
 are visible wherever the template is rendered, whether it is a layout,
@@ -30,8 +30,8 @@ handlers.
 ## Why fredit?
 
 On a current Rails project, I needed to delegate responsibility for
-improving the user interface to another person. Let's call this person
-"Chad." Chad:
+improving the copy, the styling, and the user interface to another
+person. Let's call this person "Chad." Chad:
 
 * is not a Ruby or Rails programmer
 * knows HTML and CSS
@@ -68,6 +68,10 @@ to make the sandbox more secure.
 
 Put something like this in the `Gemfile` of your Rails app:
 
+    source 'http://rubygems.org
+
+    [lines omitted]
+
     group :staging do
       gem 'fredit'
     end
@@ -76,32 +80,45 @@ and then run `RAILS_ENV=staging bundle install`, adjusting the
 `RAILS_ENV` to your target environment.
 
 To run your Rails app with fredit, just start it in the Rails
-environment Gemfile group you put the fredit gem in. The special view
-template links should then be visible and link to the fredit editor.
+environment Gemfile group you put the fredit gem in. When you hit the
+app in the browser, you should see the injected view template links and
+be able to click through them to fredit's source code editor.
 
 
 ## fredit and git 
 
 fredit assumes that the Rails instance it is running on is a cloned git
-repository. **It also assumes that you have set the current branch of git
-repository to the one you want your collaborator's changes committed
-to.**
+repository. **It also assumes that you have set the current branch of
+this git repository to the one you want your collaborator's changes
+committed to.**
 
-When your collaborator makes and save changes, fredit will commit those
-changes on the current git branch of the git repository the root of this
-instance of your Rails application. There is a form field in the fredit
-editor for the collaborator to enter git author information and a git
-log message. These bits of information accompany the git commit.
+When your collaborator makes changes, fredit will commit those changes
+on the current git branch of this clone of the git repository. There is
+a form field in the fredit editor for the collaborator to enter git
+author information and a git log message. These bits of information
+will be added as metadata to the git commit.
 
 When you're ready to review and merge the changes your collaborator made
 via fredit, it's all just a matter of working with git commits and
-branches. You can set up client-side git hooks on the fredit server to
-notify you when your collaborator has made changes, to automatically
-push those changes to the appropriate branch in the upstream repository,
-run a CI build server, etc.
+branches. You can set up client-side git hooks on the fredit-enabled
+clone to notify you when your collaborator has made changes, to
+automatically push those changes to the appropriate branch in the
+upstream repository, run a CI build server, etc.
 
 
+## Security
 
+fredit has basic security features, on top of which you can add anything
+you want. At a minimum, fredit will not allow any user to use the fredit
+web interface to edit a file above or outside the Rails application root
+directory of that Rails instance.  
+
+
+## Contribute
+
+Feel free to fork and take this simple idea wherever you want to. The
+current version of this project is really just a quick and dirty
+implementation that just does what I currently need it to.
 
 
 ## License
