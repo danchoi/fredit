@@ -27,7 +27,7 @@ You are welcome to fork and add support for Haml and other template
 handlers. 
 
 
-## fredit helps you delegate
+## fredit helps me delegate
 
 On a current Rails project, I needed to delegate responsibility for
 improving the copy, the styling, and the user interface to another
