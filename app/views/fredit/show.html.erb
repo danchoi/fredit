@@ -78,9 +78,20 @@
   <nav>
     <h3>git</h3>
     <div id="currentBranch">
-      current branch:
+      Current branch:
       <strong><%= @git.current_branch %></strong>
     </div>
+
+    <h4>Recent edits</h4>
+
+    <ul>
+      <% @git.log.each do |commit| %>
+        <li>
+          <%= commit.author.name %>
+          <%= link_to "#{time_ago_in_words commit.date} ago" %> 
+        </li> 
+      <% end %>
+    </ul>
 
   </nav>
 </section>
