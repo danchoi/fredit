@@ -54,9 +54,10 @@ addition to being heavyweight, this option is too restrictive when you want to
 give your collaborator as much control over the front-end as he or she can
 handle.
 
-I came up with fredit to avoid this hand-holding. fredit lets a
-collaborator iteratively make front-end tweaks to a Rails applications
-without having to set up and run an instance of it themselves. 
+fredit lets a collaborator make significant front-end tweaks to a Rails
+applications without the hassle of having to set up and run an instance
+of it on their computer.
+
 
 
 ## Install
