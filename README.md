@@ -59,9 +59,7 @@ application without the hassles of having to set up and run a local
 instance of it on their computer. Just run a `fredit`-enabled instance of
 your Rails app on a server that your collaborator can access through his
 or her browser. This `fredit`-enabled instance can have its own Rails
-environment, database, and git branch. You can add an authentication
-gateway and even run the instance as a special chrooted user if you want
-to make the sandbox more secure.
+environment, database, and git branch. 
 
 
 ## Install and setup
