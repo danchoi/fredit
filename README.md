@@ -109,14 +109,14 @@ upstream repository, run a CI build server, etc.
 
 ## Security
 
-fredit has rudimentary security features. At a minimum, fredit will
-not allow any user to use the fredit web interface to edit a file
-above or outside the Rails application root directory of that Rails
-instance.  
+fredit has rudimentary security features. fredit will not allow any user
+to use the fredit web interface to edit a file above or outside the
+Rails application root directory of that Rails instance.  
 
 But please take additional precautions to make sure that your
 fredit-enabled Rails instance is not accessible by hostile strangers.
-At a minimu, use Apache Basic Authentication or the like to restrict access.
+At a minimum, use Apache Basic Authentication or the like to restrict
+access.
 
 
 ## Contribute
