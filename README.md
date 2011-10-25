@@ -15,6 +15,9 @@ directly edit the source, whether it is ERB, css, or javascript. An
 update button lets you save these changes and alter the underlying
 source files.
 
+<img style="width:300px"
+src="https://github.com/danchoi/fredit/raw/master/screens/fredit.png"/>
+
 Stylesheets and javascript files are accessible through a file selection
 drop down on the fredit edit page. 
 
