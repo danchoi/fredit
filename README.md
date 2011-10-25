@@ -76,7 +76,7 @@ environment. Put something like this in the `Gemfile` of your Rails app:
     [lines omitted]
 
     group :staging do
-      gem '`fredit`'
+      gem 'fredit'
     end
 
 and then run `RAILS_ENV=staging bundle install`, adjusting the
