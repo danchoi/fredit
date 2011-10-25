@@ -14,7 +14,7 @@ module Fredit
 
   # TODO change this to be compatible with HAML
   def link(x)
-    s = %Q| <a class="fredit" href="/fredit?file=#{URI.escape(x)}" target="_blank">#{x}</a> |
+    s = %Q| <a style="color:red" href="/fredit?file=#{URI.escape(x)}" target="_blank">#{x}</a> |
     s.strip.html_safe
   end
 
