@@ -35,8 +35,8 @@ improving the user interface to another person. Let's call this person
 
 * is not a Ruby or Rails programmer
 * knows HTML and CSS
-* can make sense of ERB and Rails partials after a few minutes of
-  explanation 
+* can make perfect sense of ERB, Rails partials, and basic Ruby
+  constructs found in ERB after a few minutes of explanation 
 * can use a web browser interface to edit files
 
 One option here is to set up a full Rails development environment on
@@ -46,19 +46,20 @@ Ruby, gems, and the RDBMS on Chad's computer for him. I would have to
 teach Chad a lot of things: how to check out the application code from
 the git repository, how to start the Rails app, how to run migrations,
 how to check his changes into the git repository and push them upstream.
-All this work just to get Chad to the point where he could edit the view
-templates and the stylesheets.
+All this work just to get Chad to the point where he can edit the view
+templates and the stylesheets of your Rails app.
 
 Another option is to integrate a CMS into your Rails app. But in
-addition to being heavyweight, this option is too restrictive when you want to
-give your collaborator as much control over the front-end as he or she can
-handle.
+addition to being quite heavyweight, this approach is too restrictive when
+you want to give your collaborator as much control over the front-end as
+he or she can handle.
 
 fredit lets a collaborator make significant front-end tweaks to a Rails
-applications without the hassle of having to set up and run an instance
-of it on their computer. Instead, you simply you run a special
-fredit-enabled instance of your Rails app on a server that your
-collaborator can access through the browser.
+applications without the hassle of having to set up and run a local
+instance of it on their computer. Just run a fredit-enabled instance of
+your Rails app on a server that your collaborator can access through his
+or her browser. This freditable instance can have its own Rails
+environment, database, and git branch.
 
 
 ## Install
