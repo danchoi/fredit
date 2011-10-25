@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fredit (0.0.8)
+    fredit (0.0.9)
 
 GEM
   remote: http://rubygems.org/
