@@ -116,7 +116,7 @@ Rails application root directory of that Rails instance.
 But please take additional precautions to make sure that your
 fredit-enabled Rails instance is not accessible by hostile strangers.
 At a minimum, use Apache Basic Authentication or the like to restrict
-access.
+access to this entire Rails instance.
 
 
 ## Contribute
