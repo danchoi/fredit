@@ -20,7 +20,7 @@ class FreditController < ::ApplicationController
 
     edit_msg = !params[:edit_message].blank? ? Shellwords.shellescape(params[:edit_message].gsub('"', '')) : "unspecified edit"
 
-    session[:commit_author] = Shellwords.shellescape(params[:commit_author] || '')
+    session[:commit_author] = (params[:commit_author] || '').gsub(/['"]/, '')
     author = session[:commit_author]
     if session[:commit_author].blank?
       flash.now[:notice] = "Edited By must not be blank"
@@ -42,7 +42,7 @@ class FreditController < ::ApplicationController
       res = system %Q|git commit --author="#{author}" -m "#{edit_msg}" #{@path}|
     end
     if res == false
-      flash[:notice] = "Something went wrong with git"
+      flash[:notice] = "Something went wrong with git. Make sure you changed something and filled in required fields."
     end
     params.delete(:source)
 
