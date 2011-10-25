@@ -122,8 +122,7 @@ At a minimum, use Apache Basic Authentication or the like to restrict
 access to this entire Rails instance. 
 
 It's probably not a good idea to run a fredit-enabled Rails app on a
-server with important stuff on it, unless you chroot the user this Rails
-app runs as.
+server with important stuff on it. Use a scratch staging server.
 
 
 ## Contribute
