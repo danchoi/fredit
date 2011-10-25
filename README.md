@@ -50,7 +50,7 @@ All this work just to get Chad to the point where he could edit the view
 templates and the stylesheets.
 
 Another option is to integrate a CMS into your Rails app. But in
-addition to being heavyweight, this option is no good when you want to
+addition to being heavyweight, this option is too restrictive when you want to
 give your collaborator as much control over the front-end as he or she can
 handle.
 
