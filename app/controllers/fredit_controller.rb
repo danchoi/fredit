@@ -1,8 +1,11 @@
 require 'shellwords'
+require 'git'
 
 class FreditController < ::ApplicationController
 
   layout 'fredit'
+
+  before_filter :load_git
 
   CSS_DIR = Rails.root + 'public/stylesheets/**/*.css'
   JS_DIR = Rails.root + 'public/javascripts/**/*.js'
@@ -53,6 +56,10 @@ class FreditController < ::ApplicationController
   end
 
 private
+
+  def load_git
+    @git = Git.init
+  end
 
   def secure_path(path)
     path2 = File.expand_path(path.to_s)

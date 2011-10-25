@@ -14,4 +14,6 @@ Gem::Specification.new do |s|
   # installed as a dependency.
 
   # s.add_dependency "rails", ">= 3.0.5"
+
+  s.add_dependency "git"
 end

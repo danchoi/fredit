@@ -2,10 +2,12 @@ PATH
   remote: .
   specs:
     fredit (0.1.0)
+      git
 
 GEM
   remote: http://rubygems.org/
   specs:
+    git (1.2.5)
 
 PLATFORMS
   ruby
