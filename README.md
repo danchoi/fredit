@@ -27,7 +27,7 @@ You are welcome to fork and add support for Haml and other template
 handlers. 
 
 
-## Why fredit?
+## fredit helps you delegate
 
 On a current Rails project, I needed to delegate responsibility for
 improving the copy, the styling, and the user interface to another
@@ -54,11 +54,11 @@ addition to being quite heavyweight, this approach is too restrictive when
 you want to give your collaborator as much control over the front-end as
 he or she can handle.
 
-fredit lets a collaborator make significant front-end contributions to a
-Rails application without the hassles of having to set up and run a
-local instance of it. Just run a fredit-enabled instance of your Rails
+fredit helps you empower capable non-Rails programmers to make
+significant front-end contributions to your Rails application with
+less overhead. Just run a fredit-enabled instance of your Rails
 app on a server that your collaborator can access through his or her
-browser. This fredit-enabled instance can have its own Rails
+browser.  This fredit-enabled instance can have its own Rails
 environment, database, and git branch. 
 
 
