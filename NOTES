@@ -15,4 +15,4 @@ Template initialized with details {:virtual_path=>"shared/_navigation", :format=
     attr_reader :source, :identifier, :handler, :virtual_path, :formats, :original_encoding
 
 
-
+http://edgeapi.rubyonrails.org/classes/Rails/Engine.html
