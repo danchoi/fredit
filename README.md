@@ -116,7 +116,7 @@ leaves things like database.yml configurations accessible to the fredit
 editor. Anyone with access to the fredit editing interface will have the
 power to run arbitrary SQL on your environment's database.
 
-But please take additional precautions to make sure that your
+So please take additional precautions to make sure that your
 fredit-enabled Rails instance is not accessible by hostile strangers.
 At a minimum, use Apache Basic Authentication or the like to restrict
 access to this entire Rails instance. 
