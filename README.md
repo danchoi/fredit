@@ -34,12 +34,19 @@ improving the user interface to another person. Let's call this person
 "Chad." Chad:
 
 * is not a Ruby or Rails programmer
-* but knows HTML and CSS
+* knows HTML and CSS
 * can make sense of ERB and Rails partials after a few minutes of
   explanation 
 * can use a web browser interface to edit files
 
-One alternative here would be to set up a full development environment
+One option here is to set up a full Rails development environment on
+Chad's computer. But this would involve a lot of hand-holding. Chad is
+not familiar with Linux or git. So I would have to teach Chad a lot of
+things just to get to the point where he could edit the view files and
+the stylesheet: how to check out the application code from the git
+repository, how to start the Rails app, how to run migrations, and lots
+of other stuff.
+
 
 
 ## Install
