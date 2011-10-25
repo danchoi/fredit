@@ -88,7 +88,7 @@
       <% @git.log.each do |commit| %>
         <li>
           <%= commit.author.name %>
-          <%= link_to "#{time_ago_in_words commit.date} ago" %> 
+          <%= link_to "#{time_ago_in_words commit.date} ago", nil, :title => commit.message %> 
         </li> 
       <% end %>
     </ul>
