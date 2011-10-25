@@ -111,7 +111,9 @@ upstream repository, run a CI build server, etc.
 
 fredit has rudimentary security features. fredit will not allow any user
 to use the fredit web interface to edit a file above or outside the
-Rails application root directory of that Rails instance.  
+Rails application root directory of that Rails instance.  But this still
+leaves things like database.yml configurations accessible to the fredit
+editor.
 
 But please take additional precautions to make sure that your
 fredit-enabled Rails instance is not accessible by hostile strangers.
