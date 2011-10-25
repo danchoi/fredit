@@ -8,5 +8,10 @@ Gem::Specification.new do |s|
   s.summary = "fredit #{s.version}"
   s.authors = ["Daniel Choi"]
   s.email = ["dhchoi@gmail.com"]
+
+  # Including rails as a dependency seems to be redundant since this is
+  # a Rails Engine, and we don't want the wrong version of rails
+  # installed as a dependency.
+
   # s.add_dependency "rails", ">= 3.0.5"
 end
