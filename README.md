@@ -51,7 +51,7 @@ templates and the stylesheets.
 
 Another option is to integrate a CMS into your Rails app. But in
 addition to being heavyweight, this option is no good when you want to
-give your collaborator as much rein over the front end as he or she can
+give your collaborator as much control over the front-end as he or she can
 handle.
 
 I came up with fredit to avoid this hand-holding. fredit lets a
