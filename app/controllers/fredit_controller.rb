@@ -7,11 +7,8 @@ class FreditController < ::ApplicationController
   CSS_DIR = Rails.root + 'public/stylesheets/**/*.css'
   JS_DIR = Rails.root + 'public/javascripts/**/*.js'
 
-  def index
-    @path ||= secure_path(params[:file] || params[:new_path] || Fredit.editables[:views].first)
-    if !File.size?(@path)
-      File.open(@path, 'w') {|f| f.write("REPLACE WITH CONTENT")}
-    end
+  def show
+    @path ||= secure_path(params[:file] || Fredit.editables[:views].first)
     @source = File.read(Rails.root + @path)
   end
 
@@ -25,7 +22,7 @@ class FreditController < ::ApplicationController
     if session[:commit_author].blank?
       flash.now[:notice] = "Edited By must not be blank"
       @source = params[:source]
-      render :action => 'index'
+      render :action => 'show'
       return
     end
 
@@ -44,15 +41,15 @@ class FreditController < ::ApplicationController
     if res == false
       flash[:notice] = "Something went wrong with git. Make sure you changed something and filled in required fields."
     end
-    params.delete(:source)
-
-    redirect_to :action => 'index', :file => @path
+    redirect_to fredit_path(:file => @path)
   end
   
   def create
-    @path = secure_path params[:file]
+    @path = secure_path params[:new_file]
     FileUtils::mkdir_p File.dirname(@path)
     File.open(@path, 'w') {|f| f.write("REPLACE WITH CONTENT")}
+    flash[:notice] = "Created new file: #@path"
+    redirect_to fredit_path(:file => @path)
   end
 
 private

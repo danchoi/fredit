@@ -11,7 +11,9 @@
   <input type="submit" value="change file"/>
 </form>
 
-<form action="<%=url_for(:action => :update)%>" method="post">
+<form action="<%= fredit_path %>" method="post">
+  <input name="_method" type="hidden" value="put" />
+  <input name="utf8" type="hidden" value="&#x2713;" />
   <input type="hidden" name="file" value="<%=@path%>"/>
   <textarea name='source'><%= @source %></textarea>
 
@@ -45,12 +47,12 @@
   </table>
 </form>
 
-<form id="createFileForm" action="<%=url_for%>" method="get">
+<form id="createFileForm" action="<%= fredit_path %>" method="post">
   <table>
     <tr>
       <td>Create file at path:</td>
       <td>
-        <input type="text" name="new_path" value="" placeholder="<%=Fredit.editables[:views].first%>" size="50"/>
+        <input type="text" name="new_file" value="" placeholder="<%=Fredit.editables[:views].first%>" size="50"/>
       </td>
     </tr>
     <tr>
