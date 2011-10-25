@@ -1,6 +1,6 @@
 # fredit: front-end edit
 
-`fredit` is a very simple, no-frills Rails Engine that lets you edit your
+`fredit` is a very simple, no-frills Rails 3 Engine that lets you edit your
 Rails application's view templates, css stylesheets, and javascript
 files (a.k.a front-end files) through the browser.
 
@@ -8,13 +8,13 @@ files (a.k.a front-end files) through the browser.
 are visible wherever the template is rendered, whether it is a layout,
 a page, or a partial. 
 
-<img style="width:300px" src="https://github.com/danchoi/`fredit`/raw/master/screens/links.png"/>
+<img style="width:300px" src="https://github.com/danchoi/fredit/raw/master/screens/links.png"/>
 
 By clicking on these links, you call up a edit page that will let you
 directly edit the source. An update button lets you save these changes
 and alter the underlying source files.
 
-<img style="width:300px" src="https://github.com/danchoi/`fredit`/raw/master/screens/`fredit`.png"/>
+<img style="width:300px" src="https://github.com/danchoi/fredit/raw/master/screens/fredit.png"/>
 
 In addition to view templates, stylesheets and javascript files are
 accessible through a file selection drop down at the top of the `fredit`
