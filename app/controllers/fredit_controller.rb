@@ -75,7 +75,10 @@ private
   end
 
   def load_git_log
-    @git_log = @git.log(20).object(@path)
+    @git_log = @git.log(20).object(@path).to_a
+  rescue Git::GitExecuteError
+    @git_log = []
+    flash[:notice] = "You need to initialize a git repository or add this file to the path"
   end
 
   def secure_path(path)
