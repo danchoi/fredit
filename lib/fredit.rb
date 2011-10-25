@@ -4,6 +4,8 @@ require 'uri'
 module Fredit
   extend self
 
+  LINK_CSS = "margin:0;margin-top:-1em;padding:1px;font-size:10px;background-color:#a3f66c;border:1px solid #666;"
+
   def rel_path(path)
     path.sub(Rails.root.to_s + '/', '')
   end
@@ -14,7 +16,7 @@ module Fredit
 
   # TODO change this to be compatible with HAML
   def link(x)
-    s = %Q| <a style="color:red" href="/fredit?file=#{URI.escape(x)}" target="_blank">#{x}</a> |
+    s = %Q| <a style="#{LINK_CSS}" href="/fredit?file=#{URI.escape(x)}" target="_blank">#{x}</a> |
     s.strip.html_safe
   end
 

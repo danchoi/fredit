@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name = "fredit"
   s.description = "Edit the front end of Rails apps through the browser."
   s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.md"]
-  s.version = "0.0.2"
+  s.version = "0.0.3"
   s.summary = "fredit #{s.version}"
   s.authors = ["Daniel Choi"]
   s.email = ["dhchoi@gmail.com"]
