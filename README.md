@@ -11,19 +11,18 @@ a page, or a partial.
 <img style="width:300px" src="https://github.com/danchoi/fredit/raw/master/screens/links.png"/>
 
 By clicking on these links, you call up a edit page that will let you
-directly edit the source, whether it is ERB, css, or javascript. An
-update button lets you save these changes and alter the underlying
-source files.
+directly edit the source. An update button lets you save these changes
+and alter the underlying source files.
 
-<img style="width:300px"
-src="https://github.com/danchoi/fredit/raw/master/screens/fredit.png"/>
+<img style="width:300px" src="https://github.com/danchoi/fredit/raw/master/screens/fredit.png"/>
 
-Stylesheets and javascript files are accessible through a file selection
-drop down on the fredit edit page. 
+In addition to view templates, stylesheets and javascript files are
+accessible through a file selection drop down at the top of the fredit
+edit page. 
 
 You can also create and delete front-end files on the fredit edit page.
 
-**NOTE:** Currently only ERB template handlers are supported. You are welcome to
+**NOTE: Currently only ERB template handlers are supported.** You are welcome to
 fork and add support for Haml and other templates.
 
 
