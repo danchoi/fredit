@@ -116,8 +116,8 @@ power to run arbitrary SQL on your environment's database.
 
 So please take additional precautions to make sure that your
 fredit-enabled Rails instance can't be accessed by hostile strangers.
-At a minimum, use Apache Basic Authentication or the like to restrict
-access to this entire Rails instance. 
+At a minimum, use Basic Authentication or the like to restrict access to
+this entire Rails instance. 
 
 It's probably not a good idea to run a fredit-enabled Rails app on a
 server with important stuff on it. Use a scratch staging server.
