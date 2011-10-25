@@ -30,14 +30,16 @@ handlers.
 ## Why fredit?
 
 On a current Rails project, I needed to delegate responsibility for
-improving the user interface to another person. This person:
+improving the user interface to another person. Let's call this person
+"Chad." Chad:
 
-* is not a Rails programmer
-* knows HTML and CSS
+* is not a Ruby or Rails programmer
+* but knows HTML and CSS
 * can make sense of ERB and Rails partials after a few minutes of
-  explanation
+  explanation 
 * can use a web browser interface to edit files
 
+One alternative here would be to set up a full development environment
 
 
 ## Install
