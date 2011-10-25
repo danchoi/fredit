@@ -115,7 +115,7 @@ editor. Anyone with access to the fredit editing interface will have the
 power to run arbitrary SQL on your environment's database.
 
 So please take additional precautions to make sure that your
-fredit-enabled Rails instance is not accessible by hostile strangers.
+fredit-enabled Rails instance can't be accessed by hostile strangers.
 At a minimum, use Apache Basic Authentication or the like to restrict
 access to this entire Rails instance. 
 
