@@ -18,6 +18,9 @@ drop down on the fredit edit page.
 
 You can also create and delete front-end files on the fredit edit page.
 
+**NOTE** Currently only ERB template handlers are supported. You are welcome to
+fork and add support for Haml and other templates.
+
 
 ## Why fredit?
 
@@ -47,11 +50,6 @@ the git branch this instance of Rails application.
 Clicking on fredit link will take you to a simple web-based editor where
 you can directly edit the source of the view template.
 
-
-## Template handler support
-
-Currently only ERB template handlers are supported. You are welcome to
-fork and add support for Haml and other templates.
 
 
 commit these edits on a git branch and attribute commits to the author
