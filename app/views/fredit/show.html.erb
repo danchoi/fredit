@@ -1,7 +1,7 @@
 <section id="editor">
   <h1 id="appName">fredit <em>front-end edit</em></h1>
   <form id="fileSelector" action="<%=url_for%>">
-    <select name="file">
+    <select id="fileSelectorDropDown" name="file">
       <% Fredit.editables.each_pair do |k, v| %>
         <optgroup label="<%= k %>">
           <% v.each do |path| %>
@@ -12,6 +12,13 @@
     </select>
     <input type="submit" value="change file"/>
   </form>
+  <script>
+    $(document).ready(function() {
+      $('#fileSelectorDropDown').bind('change', function() {
+        $('#fileSelector').submit();
+      });
+    });
+  </script>
 
   <form action="<%= fredit_path %>" method="post">
     <input name="_method" type="hidden" value="put" />
