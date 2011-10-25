@@ -45,6 +45,7 @@ class FreditController < ::ApplicationController
   
   def create
     @path = params[:file]
+    FileUtils::mkdir_p File.dirname(@path)
     File.open(@path, 'w') {|f| f.write("REPLACE WITH CONTENT")}
   end
 
