@@ -8,7 +8,7 @@ fredit injects an edit link into every view template. These edit links
 are visible wherever the template is rendered, whether it is a layout,
 a page, or a partial. 
 
-<img src="https://github.com/danchoi/fredit/raw/master/screens/links.png">
+<img style="width: 50%" src="https://github.com/danchoi/fredit/raw/master/screens/links.png">
 
 By clicking on these links, you call up a edit page that will let you
 directly edit the source, whether it is ERB, css, or javascript. An
