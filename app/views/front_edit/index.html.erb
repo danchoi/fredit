@@ -4,6 +4,9 @@
     <title><%=@path%></title>
     <style>
 
+body {
+  padding-bottom: 30px;
+}
 textarea {
   width: 80%;
   height: 500px;
@@ -11,6 +14,20 @@ textarea {
 }
 #notice {
   background-color: yellow;
+}
+input#deleteBtn {
+  float:right;
+}
+input[type=text] {
+  width: 100%;
+}
+table {
+  width: 80%
+}
+form#createFileForm {
+  border-top: 1px solid #CCC;
+  margin-top: 30px;
+  padding-top: 30px;
 }
 
     </style>
@@ -54,17 +71,34 @@ textarea {
       </td>
     </tr>
     <tr>
-      <td>File path:</td>
+      <td>Action:</td>
       <td>
-        <input type="text" name="file_path" value="<%=@path%>" placeholder="File path" size="50"/>
-        <input type="submit" name="commit" value="delete file at this path"/>
+        <input hidden="text" name="file_path" value="<%=@path%>" />
+        <input type="submit" name="commit" value="update this file"/>
+        <input id="deleteBtn" type="submit" name="commit" value="delete this file"/>
       </td>
     </tr>
   </table>
-  <input type="submit" name="commit" value="update"/>
 </form>
 
-<hr/>
+<form id="createFileForm" action="<%=url_for%>" method="get">
+  <table>
+    <tr>
+      <td>Create file at path:</td>
+      <td>
+        <input type="text" name="new_path" value="" placeholder="<%=FrontEdit.editables[:views].first%>" size="50"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Action:</td>
+      <td>
+        <input type="submit" name="commit" value="create file"/>
+      </td>
+    </tr>
+  </table>
+</form>
+
+
 
   </body>
 </html>

@@ -6,7 +6,10 @@ class FrontEditController < ::ApplicationController
   JS_DIR = Rails.root + 'public/javascripts/**/*.js'
 
   def index
-    @path ||= FrontEdit.editables[:views].first
+    @path ||= params[:file] || params[:new_path] || FrontEdit.editables[:views].first
+    if !File.size?(@path)
+      File.open(@path, 'w') {|f| f.write("REPLACE WITH CONTENT")}
+    end
     @source = File.read(Rails.root + @path)
   end
 
