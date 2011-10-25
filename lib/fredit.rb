@@ -1,4 +1,5 @@
 require 'fredit/erb'
+require 'uri'
 
 module Fredit
   extend self
@@ -11,9 +12,10 @@ module Fredit
     paths.map {|x| rel_path(x)}
   end
 
+  # TODO change this to be compatible with HAML
   def link(x)
     s = <<-END
-    <a href="/fredit?file=#{x}">#{x}</a>
+    <a href="/fredit?file=#{URI.escape(x)}" target="_blank">#{x}</a>
     END
     s.strip.html_safe
   end
