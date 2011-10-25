@@ -40,14 +40,18 @@ improving the user interface to another person. Let's call this person
 * can use a web browser interface to edit files
 
 One option here is to set up a full Rails development environment on
-Chad's computer. But this option is not very attractive, because it
-would involve a lot of hand-holding. Chad is not familiar with Linux or
-git. I would have to install Ruby, gems, and the RDBMS on Chad's
-computer for him. I would have to teach Chad a lot of things: how to
-check out the application code from the git repository, how to start the
-Rails app, how to run migrations, how to check his changes into the git
-repository and push them upstream.  All this work just to get Chad to the
-point where he could edit the view templates and the stylesheet
+Chad's computer. But this option is not attractive at all for several
+reason. Chad is not familiar with Linux or git. I would have to install
+Ruby, gems, and the RDBMS on Chad's computer for him. I would have to
+teach Chad a lot of things: how to check out the application code from
+the git repository, how to start the Rails app, how to run migrations,
+how to check his changes into the git repository and push them upstream.
+All this work just to get Chad to the point where he could edit the view
+templates and the stylesheets.
+
+I came up with fredit to avoid this hand-holding. fredit lets a
+collaborator make front-end tweaks to a Rails applications without
+having to set up and run an instance of it on their local computer.
 
 
 
