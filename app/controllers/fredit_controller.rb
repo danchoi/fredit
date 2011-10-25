@@ -29,14 +29,14 @@ class FreditController < ::ApplicationController
     if params[:commit] =~ /delete/i
       `git rm #@path`
       flash[:notice] = "#@path deleted"
-      `git commit --author='#{author}' -m '#{edit_msg}' #{@path}`
+      `git commit --author="#{author}" -m "#{edit_msg}" #{@path}`
       @path = nil
     else
       n = params[:source].gsub(/\r\n/, "\n")
       File.open(@path, 'w') {|f| f.write(n)}
       `git add #{@path}`
       flash[:notice] = "#@path updated"
-      `git commit --author='#{author}' -m '#{edit_msg}' #{@path}`
+      `git commit --author="#{author}" -m "#{edit_msg}" #{@path}`
     end
     params.delete(:source)
 
