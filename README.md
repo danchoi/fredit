@@ -40,14 +40,12 @@ person. Let's call this person "Chad." Chad:
 * can use a web browser interface to edit files
 
 One option here is to set up a full Rails development environment on
-Chad's computer. But this option is not attractive for several
-reasons. Chad is not familiar with Linux or git. I would have to install
-Ruby, gems, and the RDBMS on Chad's computer for him. I would have to
-teach Chad a lot of things: how to check out the application code from
-the git repository, how to start the Rails app, how to run migrations,
-how to check his changes into the git repository and push them upstream.
-All this work just to get Chad to the point where he can edit the view
-templates and the stylesheets of your Rails app.
+Chad's computer. But this option sucks for several reasons. Chad is not
+very familiar with the command line, git, RVM, Ruby, rake, bundler, or
+you name it. To get Chad started, I would have to install a thousand and
+one dependencies on Chad's computer. I would have to tutor Chad on
+dozens of rails, bundler, gem, rake, and git incantations.  All this
+just so Chad can tweak the damn view templates and stylesheets. 
 
 Another option is to integrate a CMS into your Rails app. But in
 addition to being quite heavyweight, this approach is too restrictive when
