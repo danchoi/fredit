@@ -49,10 +49,14 @@ how to check his changes into the git repository and push them upstream.
 All this work just to get Chad to the point where he could edit the view
 templates and the stylesheets.
 
-I came up with fredit to avoid this hand-holding. fredit lets a
-collaborator make front-end tweaks to a Rails applications without
-having to set up and run an instance of it on their local computer.
+Another option is to integrate a CMS into your Rails app. But in
+addition to being heavyweight, this option is no good when you want to
+give your collaborator as much rein over the front end as he or she can
+handle.
 
+I came up with fredit to avoid this hand-holding. fredit lets a
+collaborator iteratively make front-end tweaks to a Rails applications
+without having to set up and run an instance of it themselves. 
 
 
 ## Install
