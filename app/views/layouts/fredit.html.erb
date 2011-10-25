@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=@path%></title>
+    <style type="text/css">
+
+body {
+  padding-top:0;
+  padding-bottom: 30px;
+  font-family: Verdana, Helvetica, sans;
+  font-size: 12px;
+  margin-left: 40px;
+  width: 80%;
+  background-color: #EDEDED;
+}
+h1 {
+  margin:0;
+  padding:0;
+  float:left;
+}
+h1 em {
+  font-size: smaller;
+}
+textarea {
+  width: 100%;
+  height: 500px;
+  font-family: monospace;
+}
+#notice {
+  background-color: yellow;
+}
+input#deleteBtn {
+  float:right;
+}
+input[type=text] {
+  width: 100%;
+}
+table {
+  width: 100%
+}
+form#fileSelector {
+  float:right;
+}
+form#createFileForm {
+  border-top: 1px solid #CCC;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <% if flash[:notice] %>
+      <div id="notice"><%= flash[:notice] %></div>
+    <% end %>
+
+    <h1>fredit <em>front-end edit</em></h1>
+
+    <%= yield %>
+    
+  </body>
+</html>
+
