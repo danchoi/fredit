@@ -38,14 +38,14 @@ class FreditController < ::ApplicationController
     if params[:commit] =~ /delete/i
       `git rm #@path`
       flash[:notice] = "#@path deleted"
-      res = system %Q|git commit --author='#{author}' --file '#{edit_msg_file}' #{@path}|
+      res = system %Q|git commit --author='#{author}' --file #{edit_msg_file.path} #{@path}|
       @path = nil
     else
       n = params[:source].gsub(/\r\n/, "\n")
       File.open(@path, 'w') {|f| f.write(n)}
       system %Q|git add #{@path}|
       flash[:notice] = "#@path updated"
-      res = system %Q|git commit --author='#{author}' --file '#{edit_msg_file}' #{@path}|
+      res = system %Q|git commit --author='#{author}' --file #{edit_msg_file.path} #{@path}|
     end
     if res == false
       flash[:notice] = "Something went wrong with git. Make sure you changed something and filled in required fields."
