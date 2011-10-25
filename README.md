@@ -22,11 +22,21 @@ edit page.
 
 You can also create and delete front-end files on the fredit edit page.
 
-**NOTE: Currently only ERB template handlers are supported.** You are welcome to
-fork and add support for Haml and other templates.
+**NOTE: Currently only the ERB Rails template handler is supported.**
+You are welcome to fork and add support for Haml and other template
+handlers. 
 
 
 ## Why fredit?
+
+On a current Rails project, I needed to delegate responsibility for
+improving the user interface to another person. This person:
+
+* is not a Rails programmer
+* knows HTML and CSS
+* can make sense of ERB and Rails partials after a few minutes of
+  explanation
+* can use a web browser interface to edit files
 
 
 
@@ -44,7 +54,7 @@ and then run `RAILS_ENV=staging bundle install`, adjusting the
 
 
 
-## fredit's git workflow
+## fredit and git 
 
 fredit assumes that the Rails instance it is running on is a cloned git
 repository. 
