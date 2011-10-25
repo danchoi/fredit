@@ -18,7 +18,7 @@ class FreditController < ::ApplicationController
   def update
     @path = secure_path params[:file_path]
 
-    edit_msg = !params[:edit_message].blank? ? Shellwords.shellescape(params[:edit_message].gsub('"', '')) : "unspecified edit"
+    edit_msg = !params[:edit_message].blank? ? Shellwords.shellescape(params[:edit_message].gsub(/["']/, '')) : "unspecified edit"
 
     session[:commit_author] = (params[:commit_author] || '').gsub(/['"]/, '')
     author = session[:commit_author]
@@ -32,14 +32,14 @@ class FreditController < ::ApplicationController
     if params[:commit] =~ /delete/i
       `git rm #@path`
       flash[:notice] = "#@path deleted"
-      res = system %Q|git commit --author="#{author}" -m "#{edit_msg}" #{@path}|
+      res = system %Q|git commit --author='#{author}' -m '#{edit_msg}' #{@path}|
       @path = nil
     else
       n = params[:source].gsub(/\r\n/, "\n")
       File.open(@path, 'w') {|f| f.write(n)}
       system %Q|git add #{@path}|
       flash[:notice] = "#@path updated"
-      res = system %Q|git commit --author="#{author}" -m "#{edit_msg}" #{@path}|
+      res = system %Q|git commit --author='#{author}' -m '#{edit_msg}' #{@path}|
     end
     if res == false
       flash[:notice] = "Something went wrong with git. Make sure you changed something and filled in required fields."
