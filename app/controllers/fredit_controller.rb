@@ -20,8 +20,8 @@ class FreditController < ::ApplicationController
 
     edit_msg = !params[:edit_message].blank? ? params[:edit_message] : "unspecified edit"
     edit_msg_file = Tempfile.new('commit-message')
-    t.write(edit_msg) # we write this message to a file to protect against shell injection
-    t.cloase
+    edit_msg_file.write(edit_msg) # we write this message to a file to protect against shell injection
+    edit_msg_file.cloase
 
     session[:commit_author] = (params[:commit_author] || '')
     # cleanup any shell injection attempt characters
