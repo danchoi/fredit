@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.description = "Edit the front end of Rails apps through the browser."
   s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.md"]
   s.version = "0.1.2"
-  s.summary = "fredit #{s.version}"
+  s.summary = s.description
   s.authors = ["Daniel Choi"]
   s.email = ["dhchoi@gmail.com"]
 
