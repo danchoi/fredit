@@ -42,13 +42,12 @@ improving the user interface to another person. Let's call this person
 One option here is to set up a full Rails development environment on
 Chad's computer. But this option is not very attractive, because it
 would involve a lot of hand-holding. Chad is not familiar with Linux or
-git. So I would have to teach Chad a lot of things just to get to the
-point where he could edit the view files and the stylesheet: how to
+git. I would have to install Ruby, gems, and the RDBMS on Chad's
+computer for him. I would have to teach Chad a lot of things: how to
 check out the application code from the git repository, how to start the
-Rails app, how to run migrations. I would have to install Ruby, gems,
-and the RDBMS on Chad's computer for him. I would have to teach Chad who
-to check his changes into the git repository and push them upstream. 
-
+Rails app, how to run migrations, how to check his changes into the git
+repository and push them upstream.  All this work just to get Chad to the
+point where he could edit the view templates and the stylesheet
 
 
 
