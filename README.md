@@ -55,14 +55,16 @@ you want to give your collaborator as much control over the front-end as
 he or she can handle.
 
 fredit lets a collaborator make significant front-end tweaks to a Rails
-applications without the hassle of having to set up and run a local
+applications without the hassles of having to set up and run a local
 instance of it on their computer. Just run a fredit-enabled instance of
 your Rails app on a server that your collaborator can access through his
-or her browser. This freditable instance can have its own Rails
-environment, database, and git branch.
+or her browser. This fredit-enabled instance can have its own Rails
+environment, database, and git branch. You can add an authentication
+gateway and even run the instance as a special chrooted user if you want
+to make the sandbox more secure.
 
 
-## Install
+## Install and setup
 
 Put something like this in the `Gemfile` of your Rails app:
 
@@ -73,7 +75,9 @@ Put something like this in the `Gemfile` of your Rails app:
 and then run `RAILS_ENV=staging bundle install`, adjusting the
 `RAILS_ENV` to your target environment.
 
-
+To run your Rails app with fredit, just start it in the Rails
+environment Gemfile group you put the fredit gem in. The special view
+template links should then be visible and link to the fredit editor.
 
 
 ## fredit and git 
@@ -81,15 +85,12 @@ and then run `RAILS_ENV=staging bundle install`, adjusting the
 fredit assumes that the Rails instance it is running on is a cloned git
 repository. 
 
-When you save your changes, fredit will make a git commit on
-the git branch this instance of Rails application.
+When your collaborator makes and save changes, fredit will commit those
+changes on the current git branch of the git repository the root of this
+instance of your Rails application. There is a form field in the fredit
+editor for the collaborator to enter git author information and a git
+log message. These bits of information accompany the git commit.
 
-Clicking on fredit link will take you to a simple web-based editor where
-you can directly edit the source of the view template.
-
-
-
-commit these edits on a git branch and attribute commits to the author
 
 
 
