@@ -1,5 +1,8 @@
-= FrontEdit
+# Fredit: front-end edit
 
-To be written.
+Fredit is a Rails Engine
 
-This uses MIT-LICENSE.
+
+## License
+
+Fredit is distributed under the MIT-LICENSE.
