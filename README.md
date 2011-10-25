@@ -84,7 +84,7 @@ template links and be able to click through them to fredit's source code
 editor.
 
 
-## fredit with git 
+## Use fredit with git 
 
 fredit assumes that the Rails instance it is running on is a cloned git
 repository. **It also assumes that you have set the current branch of
