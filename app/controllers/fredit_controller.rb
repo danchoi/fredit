@@ -2,7 +2,7 @@ require 'shellwords'
 
 class FreditController < ::ApplicationController
 
-  layout false
+  layout 'fredit'
 
   CSS_DIR = Rails.root + 'public/stylesheets/**/*.css'
   JS_DIR = Rails.root + 'public/javascripts/**/*.js'
