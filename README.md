@@ -121,7 +121,7 @@ directory of that Rails instance.
 
 Feel free to fork and take this simple idea wherever you want to. The
 current version of this project is really just a quick and dirty
-implementation that I needed immediately.
+implementation that I needed pronto.
 
 
 ## License
