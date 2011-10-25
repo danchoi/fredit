@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fredit (0.1.5)
+    fredit (0.1.6)
       git
 
 GEM
