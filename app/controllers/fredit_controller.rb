@@ -20,7 +20,7 @@ class FreditController < ::ApplicationController
 
     edit_msg = !params[:edit_message].blank? ? Shellwords.shellescape(params[:edit_message].gsub('"', '')) : "unspecified edit"
 
-    author = (session[:commit_author] = params[:commit_author])
+    author = Shellwords.shellescape(session[:commit_author] = params[:commit_author] || '')
     if session[:commit_author].blank?
       flash.now[:notice] = "Edited By must not be blank"
       @source = params[:source]
