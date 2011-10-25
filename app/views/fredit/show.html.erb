@@ -1,24 +1,3 @@
-<section id="editor">
-  <h1 id="appName">fredit <em>front-end edit</em></h1>
-  <form id="fileSelector" action="<%=url_for%>">
-    <select id="fileSelectorDropDown" name="file">
-      <% Fredit.editables.each_pair do |k, v| %>
-        <optgroup label="<%= k %>">
-          <% v.each do |path| %>
-            <option value="<%= path %>" <%= @path == path ? 'selected=\"selected\"' : nil %>><%= Fredit.link(path)%></li>
-          <% end %>
-        </optgroup>
-      <% end %>
-    </select>
-    <input type="submit" value="change file"/>
-  </form>
-  <script>
-    $(document).ready(function() {
-      $('#fileSelectorDropDown').bind('change', function() {
-        $('#fileSelector').submit();
-      });
-    });
-  </script>
 
   <form action="<%= fredit_path %>" method="post">
     <input name="_method" type="hidden" value="put" />
@@ -72,26 +51,5 @@
       </tr>
     </table>
   </form>
-</section>
 
-<section id="git">
-  <nav>
-    <h3>git</h3>
-    <div id="currentBranch">
-      Current branch:
-      <strong><%= @git.current_branch %></strong>
-    </div>
 
-    <h4>Recent edits</h4>
-
-    <ul>
-      <% @git.log.each do |commit| %>
-        <li>
-          <%= commit.author.name %>
-          <%= link_to "#{time_ago_in_words commit.date} ago", nil, :title => commit.message %> 
-        </li> 
-      <% end %>
-    </ul>
-
-  </nav>
-</section>

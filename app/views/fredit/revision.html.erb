@@ -1,0 +1,36 @@
+<textarea name='source'><%= @diff %></textarea>
+
+<table>
+  <tr>
+    <td>File:</td>
+    <td>
+      <%= link_to @path, fredit_path(:file => @path) %>
+    </td>
+  </tr>
+  <tr>
+    <td>Commit:</td>
+    <td>
+      <%= @sha %>
+    </td>
+  </tr>
+  <tr>
+    <td>Edited By:</td>
+    <td>
+      <%= @git_object.author.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>Date:</td>
+    <td>
+      <%= @git_object.date %>
+    </td>
+  </tr>
+  <tr>
+    <td>Log Message:</td>
+    <td>
+      <%= @git_object.message %>
+    </td>
+  </tr>
+</table>
+
+

@@ -11,6 +11,7 @@ class FreditController < ::ApplicationController
 
   def show
     @path ||= secure_path(params[:file] || Fredit.editables[:views].first)
+    load_git_log
     @source = File.read(Rails.root + @path)
   end
 
@@ -59,10 +60,22 @@ class FreditController < ::ApplicationController
     redirect_to fredit_path(:file => @path)
   end
 
+  def revision
+    @path = secure_path params[:file]
+    load_git_log
+    @sha = params[:sha].gsub(/[^0-9a-z]/, '') # shell injection protection
+    @git_object = @git.object(@sha)
+    @diff = `git show #{@sha}`
+  end
+
 private
 
   def load_git
-    @git = Git.init Rails.root
+    @git = Git.init Rails.root.to_s
+  end
+
+  def load_git_log
+    @git_log = @git.log(20).object(@path)
   end
 
   def secure_path(path)

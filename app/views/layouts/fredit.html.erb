@@ -35,6 +35,10 @@ section#git h3 {
   margin-top: 0;
   margin-bottom: 0.7em;
 }
+section#git ul {
+  padding-left: 0;
+  list-style-type: none;
+}
 
 textarea {
   width: 100%;
@@ -70,9 +74,57 @@ form#createFileForm {
       <div id="notice"><%= flash[:notice] %></div>
     <% end %>
 
+    <section id="editor">
+      <h1 id="appName">fredit <em>front-end edit</em></h1>
+      <form id="fileSelector" action="<%=fredit_path%>">
+        <select id="fileSelectorDropDown" name="file">
+          <% Fredit.editables.each_pair do |k, v| %>
+            <optgroup label="<%= k %>">
+              <% v.each do |path| %>
+                <option value="<%= path %>" <%= @path == path ? 'selected=\"selected\"' : nil %>><%= Fredit.link(path)%></li>
+              <% end %>
+            </optgroup>
+          <% end %>
+        </select>
+        <input type="submit" id="changeFileBtn" value="change file"/>
+      </form>
+      <script>
+        $(document).ready(function() {
+          $('#fileSelectorDropDown').bind('change', function() {
+            $('#fileSelector').submit();
+          });
+          $('#changeFileBtn').hide();
+        });
+      </script>
 
-    <%= yield %>
-    
+      <%= yield %>
+    </section>
+
+    <section id="git">
+      <nav>
+        <h3>git</h3>
+        <div id="currentBranch">
+          Current branch:
+          <strong><%= @git.current_branch %></strong>
+        </div>
+
+        <h4>Recent edits</h4>
+
+        <ul>
+          <% @git_log.each do |commit| %>
+            <li>
+              <%= link_to "#{commit.date.strftime('%m-%d-%y')}", 
+                          fredit_revision_path(:sha => commit.sha, :file => @path), 
+                          :title => commit.message %> 
+              <%= commit.author && commit.author.name %>:
+              <%= truncate(commit.message, :length => 15) %>
+            </li> 
+          <% end %>
+        </ul>
+
+      </nav>
+    </section>
+        
   </body>
 </html>
 
