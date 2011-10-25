@@ -52,8 +52,8 @@ addition to being quite heavyweight, this approach is too restrictive when
 you want to give your collaborator as much control over the front-end as
 he or she can handle.
 
-fredit helps you empower capable non-Rails programmers to help your on
-the front-end of your Rails app, with less overhead. Just run a
+fredit helps you empower capable non-Rails programmers to help you on
+the front-end of a Rails app, with less overhead. Just run a
 fredit-enabled instance of your Rails app on a server that he or she can
 access through a web browser.  This fredit-able instance can have its
 own Rails environment, database, and git branch. 
