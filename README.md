@@ -28,13 +28,14 @@ fork and add support for Haml and other templates.
 
 ## Install
 
-Put something like this in the Gemfile of your Rails app:
+Put something like this in the `Gemfile` of your Rails app:
 
     group :staging do
       gem 'fredit'
     end
 
-and then run `bundle install`.
+and then run `RAILS_ENV=staging bundle install`, adjusting the
+`RAILS_ENV` to your target environment.
 
 
 
