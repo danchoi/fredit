@@ -30,7 +30,7 @@ Put something like this in the Gemfile of your Rails app:
     group :staging do
       gem 'fredit'
     end
-      
+
 and then run `bundle install`.
 
 
@@ -55,6 +55,8 @@ fork and add support for Haml and other templates.
 
 
 commit these edits on a git branch and attribute commits to the author
+
+
 
 ## License
 
