@@ -1,4 +1,4 @@
-module FrontEdit
+module Fredit
   class Engine < Rails::Engine
 
   end

@@ -1,4 +1,4 @@
-class FrontEditController < ::ApplicationController
+class FreditController < ::ApplicationController
 
   layout false
 
@@ -6,7 +6,7 @@ class FrontEditController < ::ApplicationController
   JS_DIR = Rails.root + 'public/javascripts/**/*.js'
 
   def index
-    @path ||= params[:file] || params[:new_path] || FrontEdit.editables[:views].first
+    @path ||= params[:file] || params[:new_path] || Fredit.editables[:views].first
     if !File.size?(@path)
       File.open(@path, 'w') {|f| f.write("REPLACE WITH CONTENT")}
     end

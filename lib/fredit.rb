@@ -1,6 +1,6 @@
-require 'front_edit/erb'
+require 'fredit/erb'
 
-module FrontEdit
+module Fredit
   extend self
 
   def rel_path(path)
@@ -13,7 +13,7 @@ module FrontEdit
 
   def link(x)
     s = <<-END
-    <a href="/front_edit?file=#{x}">#{x}</a>
+    <a href="/fredit?file=#{x}">#{x}</a>
     END
     s.strip.html_safe
   end
@@ -37,4 +37,4 @@ module FrontEdit
 
 end
 
-require 'front_edit/engine'
+require 'fredit/engine'

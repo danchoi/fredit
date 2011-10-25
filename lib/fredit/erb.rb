@@ -25,11 +25,11 @@ module ActionView
             erb = template.source.dup
           end
 
-          # begin FrontEdit patch
+          # begin Fredit patch
 
-          if FrontEdit.template_editable?(template)
-            source_file = FrontEdit.rel_path template.identifier
-            edit_link = "<div style='color:red'>#{FrontEdit.link(source_file)}</div> "
+          if Fredit.template_editable?(template)
+            source_file = Fredit.rel_path template.identifier
+            edit_link = "<div style='color:red'>#{Fredit.link(source_file)}</div> "
             if erb =~ /^\s*<!DOCTYPE/ && erb =~ /<body[^>]*>/
               erb = erb.sub(/<body[^>]*>/, '\&' + edit_link)
             else
@@ -37,7 +37,7 @@ module ActionView
             end
           end
 
-          # end FrontEdit patch
+          # end Fredit patch
 
           self.class.erb_implementation.new(
             erb,

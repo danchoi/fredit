@@ -38,14 +38,14 @@ form#createFileForm {
   <div id="notice"><%= flash[:notice] %></div>
 <% end %>
 
-<h1>Front edit</h1>
+<h1>Fredit: front-end edit</h1>
 
 <form action="<%=url_for%>">
   <select name="file">
-    <% FrontEdit.editables.each_pair do |k, v| %>
+    <% Fredit.editables.each_pair do |k, v| %>
       <optgroup label="<%= k %>">
         <% v.each do |path| %>
-          <option value="<%= path %>" <%= @path == path ? 'selected=\"selected\"' : nil %>><%= FrontEdit.link(path)%></li>
+          <option value="<%= path %>" <%= @path == path ? 'selected=\"selected\"' : nil %>><%= Fredit.link(path)%></li>
         <% end %>
       </optgroup>
     <% end %>
@@ -86,7 +86,7 @@ form#createFileForm {
     <tr>
       <td>Create file at path:</td>
       <td>
-        <input type="text" name="new_path" value="" placeholder="<%=FrontEdit.editables[:views].first%>" size="50"/>
+        <input type="text" name="new_path" value="" placeholder="<%=Fredit.editables[:views].first%>" size="50"/>
       </td>
     </tr>
     <tr>
