@@ -78,9 +78,10 @@ and then run `RAILS_ENV=staging bundle install`, adjusting the
 `RAILS_ENV` to your target environment.
 
 To run your Rails app with fredit, just start it in the Rails
-environment Gemfile group you put the fredit gem in. When you hit the
-app in the browser, you should see the injected view template links and
-be able to click through them to fredit's source code editor.
+environment corresponding to the Gemfile group you put fredit in. When
+you hit the app in the browser, you should see the injected view
+template links and be able to click through them to fredit's source code
+editor.
 
 
 ## fredit with git 
