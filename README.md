@@ -23,6 +23,19 @@ You can also create and delete front-end files on the fredit edit page.
 
 
 
+## Install
+
+Put something like this in the Gemfile of your Rails app:
+
+    group :staging do
+      gem 'fredit'
+    end
+      
+and then run `bundle install`.
+
+
+
+
 ## fredit's git workflow
 
 fredit assumes that the Rails instance it is running on is a cloned git
