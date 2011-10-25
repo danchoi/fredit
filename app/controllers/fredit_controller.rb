@@ -6,7 +6,7 @@ class FreditController < ::ApplicationController
   JS_DIR = Rails.root + 'public/javascripts/**/*.js'
 
   def index
-    @path ||= params[:file] || params[:new_path] || Fredit.editables[:views].first
+    @path ||= secure_path(params[:file] || params[:new_path] || Fredit.editables[:views].first)
     if !File.size?(@path)
       File.open(@path, 'w') {|f| f.write("REPLACE WITH CONTENT")}
     end
@@ -14,7 +14,7 @@ class FreditController < ::ApplicationController
   end
 
   def update
-    @path = params[:file_path]
+    @path = secure_path params[:file_path]
 
     edit_msg = !params[:edit_message].blank? ? params[:edit_message] : "unspecified edit"
 
@@ -44,9 +44,19 @@ class FreditController < ::ApplicationController
   end
   
   def create
-    @path = params[:file]
+    @path = secure_path params[:file]
     FileUtils::mkdir_p File.dirname(@path)
     File.open(@path, 'w') {|f| f.write("REPLACE WITH CONTENT")}
+  end
+
+private
+
+  def secure_path(path)
+    path2 = File.expand_path(path.to_s)
+    if path2.index(Rails.root.to_s) != 0
+      raise "Unauthorized path: #{path2} (Raw: #{path})"
+    end
+    path
   end
 
 end
