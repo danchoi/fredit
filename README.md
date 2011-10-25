@@ -18,7 +18,7 @@ drop down on the fredit edit page.
 
 You can also create and delete front-end files on the fredit edit page.
 
-**NOTE** Currently only ERB template handlers are supported. You are welcome to
+**NOTE:** Currently only ERB template handlers are supported. You are welcome to
 fork and add support for Haml and other templates.
 
 
