@@ -40,8 +40,8 @@ improving the user interface to another person. Let's call this person
 * can use a web browser interface to edit files
 
 One option here is to set up a full Rails development environment on
-Chad's computer. But this option is not attractive at all for several
-reason. Chad is not familiar with Linux or git. I would have to install
+Chad's computer. But this option is not attractive for several
+reasons. Chad is not familiar with Linux or git. I would have to install
 Ruby, gems, and the RDBMS on Chad's computer for him. I would have to
 teach Chad a lot of things: how to check out the application code from
 the git repository, how to start the Rails app, how to run migrations,
