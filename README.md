@@ -83,13 +83,23 @@ template links should then be visible and link to the fredit editor.
 ## fredit and git 
 
 fredit assumes that the Rails instance it is running on is a cloned git
-repository. 
+repository. **It also assumes that you have set the current branch of git
+repository to the one you want your collaborator's changes committed
+to.**
 
 When your collaborator makes and save changes, fredit will commit those
 changes on the current git branch of the git repository the root of this
 instance of your Rails application. There is a form field in the fredit
 editor for the collaborator to enter git author information and a git
 log message. These bits of information accompany the git commit.
+
+When you're ready to review and merge the changes your collaborator made
+via fredit, it's all just a matter of working with git commits and
+branches. You can set up client-side git hooks on the fredit server to
+notify you when your collaborator has made changes, to automatically
+push those changes to the appropriate branch in the upstream repository,
+run a CI build server, etc.
+
 
 
 
