@@ -56,8 +56,9 @@ handle.
 
 fredit lets a collaborator make significant front-end tweaks to a Rails
 applications without the hassle of having to set up and run an instance
-of it on their computer.
-
+of it on their computer. Instead, you simply you run a special
+fredit-enabled instance of your Rails app on a server that your
+collaborator can access through the browser.
 
 
 ## Install
