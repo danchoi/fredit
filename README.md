@@ -5,7 +5,7 @@ application's view templates, css stylesheets, and javascript files
 (a.k.a front-end files) through the browser.
 
 fredit injects an edit link into every view template. These edit links
-are visible whereever the template is rendered, whether it is a layout,
+are visible wherever the template is rendered, whether it is a layout,
 a page, or a partial. 
 
 By clicking on these links, you call up a edit page that will let you
