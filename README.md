@@ -66,9 +66,12 @@ to make the sandbox more secure.
 
 ## Install and setup
 
-Put something like this in the `Gemfile` of your Rails app:
+`fredit` requires Rails 3.
 
-    source 'http://rubygems.org
+`fredit` works best as a gem you include in a specific Rails
+environment. Put something like this in the `Gemfile` of your Rails app:
+
+    source 'http://rubygems.org'
 
     [lines omitted]
 
