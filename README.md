@@ -1,4 +1,4 @@
-# `fredit`: front-end edit
+# fredit: front-end edit
 
 `fredit` is a very simple, no-frills Rails Engine that lets you edit your
 Rails application's view templates, css stylesheets, and javascript
@@ -27,7 +27,7 @@ You are welcome to fork and add support for Haml and other template
 handlers. 
 
 
-## Why `fredit`?
+## Why fredit?
 
 On a current Rails project, I needed to delegate responsibility for
 improving the copy, the styling, and the user interface to another
@@ -85,7 +85,7 @@ app in the browser, you should see the injected view template links and
 be able to click through them to `fredit`'s source code editor.
 
 
-## `fredit` and git 
+## fredit with git 
 
 `fredit` assumes that the Rails instance it is running on is a cloned git
 repository. **It also assumes that you have set the current branch of
