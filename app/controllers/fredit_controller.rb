@@ -1,3 +1,5 @@
+require 'shellwords'
+
 class FreditController < ::ApplicationController
 
   layout false
@@ -16,7 +18,7 @@ class FreditController < ::ApplicationController
   def update
     @path = secure_path params[:file_path]
 
-    edit_msg = !params[:edit_message].blank? ? params[:edit_message] : "unspecified edit"
+    edit_msg = !params[:edit_message].blank? ? Shellwords.shellescape(params[:edit_message].gsub('"', '')) : "unspecified edit"
 
     author = (session[:commit_author] = params[:commit_author])
     if session[:commit_author].blank?
