@@ -2,7 +2,7 @@
 
 fredit is a simple, no-frills Rails Engine that lets you edit your Rails
 application's view templates, css stylesheets, and javascript files
-through the browser.
+(a.k.a front-end files) through the browser.
 
 fredit injects an edit link into every view template. These edit links
 are visible whereever the template is rendered, whether it is a layout,
@@ -12,6 +12,12 @@ By clicking on these links, you call up a edit page that will let you
 directly edit the source, whether it is ERB, css, or javascript. An
 update button lets you save these changes and alter the underlying
 source files.
+
+Stylesheets and javascript files are accessible through a file selection
+drop down on the fredit edit page. 
+
+You can also create and delete front-end files on the fredit edit page.
+
 
 ## Why fredit?
 
