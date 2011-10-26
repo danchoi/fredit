@@ -60,7 +60,7 @@ access through a web browser.  This fredit-able instance can have its
 own Rails environment, database, and git branch. 
 
 
-## Some ranting (reading optional)
+## Remember "comparative advantage"?
 
 It's becoming less and less sustainable to have Rails programmers as
 gatekeepers and bottlenecks through which all markup and source code must
