@@ -71,7 +71,7 @@ effectively into the Rails application development cycle. No, the answer
 is not to train everyone to be a
 Rails/jQuery/PostgreSQL/Haml/Git/CoffeeScript/MongoDB ninja.  Part of
 the answer must be finding better ways to allow people with a even just
-little bit of Ruby, HTML, JavaScript, and CSS knownledge to take some of
+little bit of Ruby, HTML, JavaScript, and CSS knowledge to take some of
 the workload off our broad but still finite programming shoulders.
 Instead of looking for the next Haml or Slim, which shaves off yet
 another 0.5 percent of superfluous markup typing, isn't it better to
