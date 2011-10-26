@@ -76,7 +76,7 @@ the workload off our broad but still finite programming shoulders.
 Instead of looking for the next Haml or Slim or Sass, which shaves off yet
 another 0.5 percent of superfluous typing from your template and css typing
 sessions, isn't it better to make it easier for OTHER PEOPLE, EVEN
-NON-RAILS EXPERTS, to write and maintain the view templates for you?
+NON-RAILS EXPERTS, to write and maintain the view layer for you?
 Who knows, they might even find it fun and educational.
 
 More compact DSLs are not the only way to increase programmer happiness
