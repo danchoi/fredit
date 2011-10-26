@@ -74,16 +74,17 @@ the answer must be finding better ways to allow people with a even just
 little bit of Ruby, HTML, JavaScript, and CSS knowledge to take some of
 the workload off our broad but still finite programming shoulders.
 Instead of looking for the next Haml or Slim, which shaves off yet
-another 0.5 percent of superfluous markup typing, isn't it better to
-make it easier for OTHER PEOPLE (NON-NINJAS) to write and maintain the
-view templates for us?  They might even find it fun and educational.
+another 0.5 percent of superfluous typing from your template typing
+sessions, isn't it better to make it easier for OTHER PEOPLE, EVEN
+NON-RAILS EXPERTS, to write and maintain the view templates for you?
+Who knows, they might even find it fun and educational.
 
 More compact DSLs are not the only way to increase programmer happiness
 and productivity. Another way is to achieve a more productive division
 of labor with those who aren't web dev ninjas but who are available and
-willing to help.
-Think [comparative advantage][comparative] from your college economics
-class. We need to apply this idea more to software development.
+willing to help.  Think [comparative advantage][comparative] from your
+college economics class. We need to apply this idea more to software
+development.
 
 [comparative]:http://www.econlib.org/library/Topics/Details/comparativeadvantage.html
 
