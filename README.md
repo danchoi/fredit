@@ -84,7 +84,7 @@ of labor with those who aren't web dev ninjas.  Think [comparative
 advantage][comparative] from your college economics class. We need to
 apply this idea more to software development.
 
-[comparative]:http://en.wikipedia.org/wiki/Comparative_advantage
+[comparative]:http://www.econlib.org/library/Topics/Details/comparativeadvantage.html
 
 
 ## Install and setup
