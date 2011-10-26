@@ -73,7 +73,7 @@ is not to train everyone to be a
 Rails/jQuery/PostgreSQL/Haml/Git/CoffeeScript/MongoDB ninja.  Part of
 the answer must be finding better ways to use people with a even just
 little bit of Ruby, HTML, JavaScript, and CSS knownledge to take some of
-the workload off our broad but still limited programming shoulders.
+the workload off our broad but still finite programming shoulders.
 Instead of looking for the next Haml or Slim, which shaves off yet
 another 0.5 percent of superfluous markup typing, isn't it better to
 find ways to make it easier to get OTHER PEOPLE to write and maintain
