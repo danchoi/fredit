@@ -27,7 +27,7 @@ You are welcome to fork and add support for Haml and other template
 handlers. 
 
 
-## Why fredit? Because it helps me delegate
+## Why fredit? Because it helps me get helped
 
 On a current Rails project, I needed to delegate responsibility for
 improving the copy, the styling, and the user interface to another
