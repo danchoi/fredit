@@ -62,10 +62,9 @@ own Rails environment, database, and git branch.
 
 ## Some ranting (reading optional)
 
-Rails development is becoming more and more complicated and evolving
-faster and faster. So is HTML and JavaScript development. You do the
-math. It's becoming less and less sustainable to have Rails programmers
-as gatekeepers of the whole Rails application stack. 
+It's becoming less and less sustainable to have Rails programmers as
+gatekeepers and bottlenecks through which all source code must
+pass.
 
 We need to figure out better ways to fold non-Rails programmers
 effectively into the Rails application development cycle. No, the answer
