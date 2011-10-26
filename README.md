@@ -60,7 +60,7 @@ access through a web browser.  This fredit-able instance can have its
 own Rails environment, database, and git branch. 
 
 
-## More ranting (reading optional)
+## Some ranting (reading optional)
 
 Rails development is becoming more and more complicated and evolving
 faster and faster. So is HTML and JavaScript development. You do the
