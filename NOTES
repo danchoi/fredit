@@ -1,10 +1,5 @@
 http://coding.smashingmagazine.com/2011/06/23/a-guide-to-starting-your-own-rails-engine-gem/
 
-
-Front bend
-
-Can use this with Chris for small tweaks
-
 --------------------------------------------------------------------------------
 Template initialized with identifier /home/choi/projects/kf3/app/views/shared/_navigation.html.erb
 --------------------------------------------------------------------------------
@@ -17,5 +12,27 @@ Template initialized with details {:virtual_path=>"shared/_navigation", :format=
 
 http://edgeapi.rubyonrails.org/classes/Rails/Engine.html
 
+
+Other related projects
+
+http://www.webputty.net/
+
+  WebPutty is a simple CSS editing and hosting service.
+
+http://blog.fogcreek.com/webputty-css-editing-goes-boink/?fccmp=webputty
+
+
+http://ace.ajax.org/
+  
+  Ace is a standalone code editor written in JavaScript. Our goal is to
+  create a web based code editor that matches and extends the features,
+  usability and performance of existing native editors such as TextMate,
+  Vim or Eclipse. It can be easily embedded in any web page and
+  JavaScript application. Ace is developed as the primary editor for
+  Cloud9 IDE and the successor of the Mozilla Skywriter (Bespin)
+  Project.
+
+
 matt griffin's suggestion
 http://codemirror.net/
+
