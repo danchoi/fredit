@@ -76,8 +76,15 @@ the workload off our broad but still finite programming shoulders.
 Instead of looking for the next Haml or Slim, which shaves off yet
 another 0.5 percent of superfluous markup typing, isn't it better to
 make it easier to get OTHER PEOPLE to write and maintain
-the view templates for us? That's the kind of thinking I would like to
-encourage in the Rails community with this little rant.
+the view templates for us? 
+
+More compact DSLs are not the only way to increase programmer happiness
+and productivity. Another way is to achieve a more productive division
+of labor.  Think [comparative advantage][comparative] from your college
+economics class. We need to apply this idea more to software
+development.
+
+[comparative]:http://en.wikipedia.org/wiki/Comparative_advantage
 
 
 ## Install and setup
