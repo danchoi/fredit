@@ -76,7 +76,7 @@ the workload off our broad but still finite programming shoulders.
 Instead of looking for the next Haml or Slim, which shaves off yet
 another 0.5 percent of superfluous markup typing, isn't it better to
 make it easier for OTHER PEOPLE (NON-NINJAS) to write and maintain the
-view templates for us? 
+view templates for us?  They might even find it fun and educational.
 
 More compact DSLs are not the only way to increase programmer happiness
 and productivity. Another way is to achieve a more productive division
