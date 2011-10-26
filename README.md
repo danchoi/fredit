@@ -63,7 +63,7 @@ own Rails environment, database, and git branch.
 ## Some ranting (reading optional)
 
 It's becoming less and less sustainable to have Rails programmers as
-gatekeepers and bottlenecks through which all source code must
+gatekeepers and bottlenecks through which all markup and source code must
 pass.
 
 We need to figure out better ways to fold non-Rails programmers
