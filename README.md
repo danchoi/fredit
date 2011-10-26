@@ -60,7 +60,7 @@ access through a web browser.  This fredit-able instance can have its
 own Rails environment, database, and git branch. 
 
 
-## The best templating system: other people
+## The best Ruby templating system: other people
 
 It's becoming less and less sustainable to have Rails programmers as
 gatekeepers and bottlenecks through which all markup and source code must
