@@ -45,18 +45,40 @@ very familiar with the command line, git, RVM, Ruby, rake, bundler, or
 you name it. To get Chad started, I would have to install a thousand and
 one dependencies on Chad's computer. I would have to tutor Chad on
 dozens of rails, bundler, gem, rake, and git incantations.  All this
-just so Chad can tweak the damn view templates and stylesheets. 
+just so Chad can tweak the frackin view templates and stylesheets. This
+is madness. 
 
 Another option is to integrate a CMS into your Rails app. But in
-addition to being quite heavyweight, this approach is too restrictive when
-you want to give your collaborator as much control over the front-end as
-he or she can handle.
+addition to adding a mass of dependencies and code bloat, this approach
+is too restrictive when you want to give your collaborator as much
+control over the front-end as he or she can handle.
 
 **fredit helps you empower capable non-Rails programmers to help you on
 the front-end of a Rails app, with less overhead.** Just run a
 fredit-enabled instance of your Rails app on a server that he or she can
 access through a web browser.  This fredit-able instance can have its
 own Rails environment, database, and git branch. 
+
+
+## More ranting (reading optional)
+
+Rails development is becoming more and more complicated and evolving
+faster and faster. So is HTML and JavaScript development. You do the
+math. It's becoming less and less sustainable to have Rails programmers
+as gatekeepers of the whole Rails application stack. 
+
+We need to figure out better ways to fold non-Rails programmers
+effectively into the Rails application development cycle. No, the answer
+is not to train everyone to be a
+Rails/jQuery/PostgreSQL/Haml/Git/CoffeeScript/MongoDB ninja.  Part of
+the answer must be finding better ways to use people with a even just
+little bit of Ruby, HTML, JavaScript, and CSS knownledge to take some of
+the workload off our broad but still limited programming shoulders.
+Instead of looking for the next Haml or Slim, which shaves off yet
+another 0.5 percent of superfluous markup typing, isn't it better to
+find ways to make it easier to get OTHER PEOPLE to write and maintain
+the view templates for us? That's the kind of thinking I would like to
+encourage in the Rails community with this little rant.
 
 
 ## Install and setup
