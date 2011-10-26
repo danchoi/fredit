@@ -80,7 +80,7 @@ for us?
 
 More compact DSLs are not the only way to increase programmer happiness
 and productivity. Another way is to achieve a more productive division
-of labor with those who aren't web dev ninjas but who available and
+of labor with those who aren't web dev ninjas but who are available and
 willing to help.
 Think [comparative advantage][comparative] from your college economics
 class. We need to apply this idea more to software development.
