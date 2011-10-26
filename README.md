@@ -156,7 +156,8 @@ server with important stuff on it. Use a scratch staging server.
 
 Feel free to fork and take this simple idea wherever you want to. The
 current version of this project is really just a quick and dirty
-implementation that I needed pronto.
+implementation that I needed pronto. Pull requests are very welcome.
+
 
 
 ## License
