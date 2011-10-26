@@ -76,7 +76,7 @@ little bit of Ruby, HTML, JavaScript, and CSS knownledge to take some of
 the workload off our broad but still finite programming shoulders.
 Instead of looking for the next Haml or Slim, which shaves off yet
 another 0.5 percent of superfluous markup typing, isn't it better to
-find ways to make it easier to get OTHER PEOPLE to write and maintain
+make it easier to get OTHER PEOPLE to write and maintain
 the view templates for us? That's the kind of thinking I would like to
 encourage in the Rails community with this little rant.
 
