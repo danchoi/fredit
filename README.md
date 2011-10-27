@@ -54,11 +54,13 @@ is too restrictive when you want to give your collaborator as much
 control over the front-end as he or she can handle.
 
 **fredit helps you empower capable non-Rails programmers to help you on
-the front-end of a Rails app, with less overhead.** Just run a
-fredit-enabled instance of your Rails app on a server that he or she can
-access through a web browser.  This fredit-able instance can have its
-own Rails environment, database, and git branch. 
+the front-end of a Rails app, with less overhead.** 
 
+Just run a fredit-enabled instance of your Rails app on a server that he
+or she can access through a web browser.  This fredit-able instance can
+have its own Rails environment, database, and git branch. You probably
+put a copy of your app on staging server anyway, so you can use that
+instance for fredit-ing.
 
 ## The best Ruby templating system is other people
 
@@ -116,7 +118,7 @@ editor.
 
 ## Use fredit with git 
 
-fredit assumes that the Rails instance it is running on is a cloned git
+fredit assumes that the Rails instance it is running on is a git
 repository. **It also assumes that you have set the current branch of
 this git repository to the one you want your collaborator's changes
 committed to.**
@@ -137,12 +139,12 @@ upstream repository, run a CI build server, etc.
 
 ## Security
 
-fredit has rudimentary security features. fredit will not allow any user
-to use the fredit web interface to edit a file above or outside the
-Rails application root directory of that Rails instance.  But this still
-leaves things like database.yml configurations accessible to the fredit
-editor. Anyone with access to the fredit editing interface will have the
-power to run arbitrary SQL on your environment's database.
+Currently, fredit has only rudimentary security features. fredit will
+not allow any user to use the fredit web interface to edit a file above
+or outside the Rails application root directory of that Rails instance.
+But this still leaves things like database.yml configurations accessible
+to the fredit editor. Anyone with access to the fredit editing interface
+will have the power to run arbitrary SQL on your environment's database.
 
 So please take additional precautions to make sure that your
 fredit-enabled Rails instance can't be accessed by hostile strangers.
