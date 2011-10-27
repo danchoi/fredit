@@ -48,7 +48,7 @@ dozens of rails, bundler, gem, rake, and git incantations.  All this
 just so Chad can tweak the frackin view templates and stylesheets. This
 is madness. And if you want to add additional non-Rails people as
 front-end collaborators, [the King of Sparta kicks you into a
-pit][sparta].
+pit][sparta]. Have fun.
 
 [sparta]:http://www.youtube.com/watch?v=-qR0Uke2XNI
 
