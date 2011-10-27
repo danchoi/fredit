@@ -83,7 +83,8 @@ and productivity. Another way is to achieve a more productive division
 of labor with those who aren't full-stack web dev ninjas or perhaps not
 even "real" programmers but who are available and willing to help.
 Think [comparative advantage][comparative] from your college economics
-class. We need to apply this idea more to software development.
+class. We need to apply this idea more to software development.  Let's
+lower the "collaboration barrier" to reap further gains in productivity.
 
 [comparative]:http://www.econlib.org/library/Topics/Details/comparativeadvantage.html
 
