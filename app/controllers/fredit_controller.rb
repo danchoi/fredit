@@ -31,6 +31,7 @@ class FreditController < ::ApplicationController
     if session[:commit_author].blank?
       flash.now[:notice] = "Edited By must not be blank"
       @source = params[:source]
+      load_git_log
       render :action => 'show'
       return
     end
