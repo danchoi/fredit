@@ -59,7 +59,7 @@ the front-end of a Rails app, with less overhead.**
 Just run a fredit-enabled instance of your Rails app on a server that he
 or she can access through a web browser.  This fredit-able instance can
 have its own Rails environment, database, and git branch. You probably
-put a copy of your app on staging server anyway, so you can use that
+put a copy of your app on a staging server anyway, so you can use that
 instance for fredit-ing.
 
 ## The best Ruby templating system is other people
