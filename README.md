@@ -46,7 +46,8 @@ you name it. To get Chad started, I would have to install a thousand and
 one dependencies on Chad's computer. I would have to tutor Chad on
 dozens of rails, bundler, gem, rake, and git incantations.  All this
 just so Chad can tweak the frackin view templates and stylesheets. This
-is madness. 
+is madness. And if you want to add additional non-Rails people as
+front-end collaborators, madness goes up to 11.
 
 Another option is to integrate a CMS into your Rails app. But in
 addition to adding a mass of dependencies and code bloat, this approach
