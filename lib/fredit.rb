@@ -1,7 +1,7 @@
 if Rails.version < '3.1.0'
-  require 'fredit/erb'
+  require 'fredit/template30'
 else
-  require 'fredit/erb31'
+  require 'fredit/template31'
 end
 require 'uri'
 
@@ -35,11 +35,26 @@ module Fredit
     {:css => css, :views => views, :javascript => js}
   end
 
+  def add_fredit_link(template, s)
+    return s unless template_editable?(template)
+    if s =~ /^\s*<!DOCTYPE/ && s =~ /<body[^>]*>/
+      s.sub(/<body[^>]*>/, '\&' + fredit_link(template))
+    else
+      fredit_link(template) + s
+    end
+  end
+
+  def fredit_link(template)
+    source_file = Fredit.rel_path template.identifier
+    edit_link = "<div style='color:red'>#{Fredit.link(source_file)}</div>".html_safe
+  end
+
   def template_editable?(template)
     template.identifier.index(Rails.root.to_s) == 0 &&
       template.formats && 
       template.formats.include?(:html)
   end
+
 
 end
 
