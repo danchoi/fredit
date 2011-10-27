@@ -50,7 +50,7 @@ templates and stylesheets. This is madness. And if you want to add
 additional non-Rails people as front-end collaborators, [the King of
 Sparta kicks you into a pit][sparta]. Have fun.
 
-[sparta]:http://www.youtube.com/watch?v=-qR0Uke2XNI
+[sparta]:http://www.youtube.com/watch?v=wDiUG52ZyHQ&t=38s
 
 Another option is to integrate a CMS into your Rails app. But in
 addition to adding a mass of dependencies and code bloat, this approach
