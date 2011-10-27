@@ -66,19 +66,15 @@ instance for fredit-ing.
 
 It's becoming less and less sustainable to have Rails programmers serve
 as gatekeepers and bottlenecks through which all markup and source code
-must pass.
+must pass.  Part of the answer must be finding better ways to allow
+people with a even just little bit of Ruby, HTML, JavaScript, and CSS
+knowledge to take some of the workload off our broad but still finite
+programming shoulders.  
 
-We need to figure out better ways to fold non-Rails programmers
-effectively into the Rails application development cycle. No, the answer
-is not to train everyone to be a
-Rails/jQuery/PostgreSQL/Haml/Git/CoffeeScript/MongoDB ninja.  Part of
-the answer must be finding better ways to allow people with a even just
-little bit of Ruby, HTML, JavaScript, and CSS knowledge to take some of
-the workload off our broad but still finite programming shoulders.
-Instead of looking for the next Haml or Slim or Sass, which shaves off yet
-another 0.5 percent of superfluous typing from your template and css typing
-sessions, isn't it better to make it easier for OTHER PEOPLE, EVEN
-NON-RAILS EXPERTS, to write and maintain the view layer for you?
+Instead of looking for the next Haml or Slim or Sass, which shaves off
+yet another 0.5 percent of superfluous typing from your template and css
+typing sessions, isn't it better to make it easier for OTHER PEOPLE,
+EVEN NON-RAILS EXPERTS, to write and maintain the view layer for you?
 Who knows, they might even find it fun and educational.
 
 More compact DSLs are not the only way to increase programmer happiness
