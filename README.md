@@ -62,14 +62,14 @@ have its own Rails environment, database, and git branch. You probably
 put a copy of your app on a staging server anyway, so you can use that
 instance for fredit-ing.
 
-## The best Ruby templating system is other people
+## The ideal Ruby templating system is other people
 
 It's becoming less and less sustainable to have Rails programmers serve
 as gatekeepers and bottlenecks through which all markup and source code
-must pass.  Part of the answer must be finding better ways to allow
-people with a even just little bit of Ruby, HTML, JavaScript, and CSS
-knowledge to take some of the workload off our broad but still finite
-programming shoulders.  
+must pass.  We should be searching for ways to allow people with a even
+just little bit of Ruby, HTML, JavaScript, and CSS knowledge to take
+some of the workload off our broad but still finite programming
+shoulders.  
 
 Instead of looking for the next Haml or Slim or Sass, which shaves off
 yet another 0.5 percent of superfluous typing from your template and css
