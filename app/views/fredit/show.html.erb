@@ -1,9 +1,34 @@
+<% content_for :head do %>
+  <%= javascript_include_tag '/ace/ace.js' %>
+  <script src="/ace/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/ace/mode-html.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    var aceEditor;
+    $(function() {
+      aceEditor = ace.edit('sourceEditBox');
+      aceEditor.setTheme("ace/theme/twilight");
+      var JavaScriptMode = require("ace/mode/javascript").Mode;
+      aceEditor.getSession().setMode(new JavaScriptMode());
+      aceEditor.renderer.setShowPrintMargin(false);
+      aceEditor.getSession().setTabSize(2);
+      aceEditor.getSession().setUseSoftTabs(true);
+      aceEditor.getSession().setUseWrapMode(false);
 
-  <form action="<%= fredit_path %>" method="post">
+      $('#sourceEditor').bind('submit', function() {
+        var source = aceEditor.getSession().getValue();
+        var sourceInput = $("<input>").attr("type", "hidden").attr("name", "source").val(source);
+        $('#sourceEditor').append($(sourceInput));
+      });
+    });;
+  </script>
+<% end %>
+
+  <form id="sourceEditor" action="<%= fredit_path %>" method="post">
     <input name="_method" type="hidden" value="put" />
     <input name="utf8" type="hidden" value="&#x2713;" />
     <input type="hidden" name="file" value="<%=@path%>"/>
-    <textarea name='source'><%= @source %></textarea>
+
+    <div id='sourceEditBox' name='source'><%= @source %></div>
 
     <table>
       <tr>

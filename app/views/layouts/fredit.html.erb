@@ -3,70 +3,8 @@
   <head>
     <title><%=@path%></title>
     <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js' %>
-    <style type="text/css">
-
-body {
-  padding-top:0;
-  padding-bottom: 30px;
-  font-family: Verdana, Helvetica, sans;
-  font-size: 12px;
-  margin-left: 40px;
-  width: 92%;
-  background-color: #EDEDED;
-}
-h1#appName {
-  margin:0;
-  padding:0;
-  display: inline;
-}
-h1#appName em {
-  font-size: smaller;
-}
-section#editor {
-  float: left;
-  width: 74%;
-}
-section#git {
-  float: left;
-  width: 23%;
-  padding-left: 2%;
-}
-section#git h3 {
-  margin-top: 0;
-  margin-bottom: 0.7em;
-}
-section#git ul {
-  padding-left: 0;
-  list-style-type: none;
-}
-
-textarea {
-  width: 100%;
-  height: 500px;
-  font-family: monospace;
-}
-#notice {
-  background-color: yellow;
-}
-input#deleteBtn {
-  float:right;
-}
-input[type=text] {
-  width: 100%;
-}
-table {
-  width: 100%
-}
-form#fileSelector {
-  float:right;
-}
-form#createFileForm {
-  border-top: 1px solid #CCC;
-  margin-top: 10px;
-  padding-top: 10px;
-}
-
-    </style>
+    <%= yield :head %>
+    <%= stylesheet_link_tag '/assets/fredit.css' %>
   </head>
   <body>
 
