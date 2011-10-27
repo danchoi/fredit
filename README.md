@@ -47,7 +47,10 @@ one dependencies on Chad's computer. I would have to tutor Chad on
 dozens of rails, bundler, gem, rake, and git incantations.  All this
 just so Chad can tweak the frackin view templates and stylesheets. This
 is madness. And if you want to add additional non-Rails people as
-front-end collaborators, madness goes up to 11.
+front-end collaborators, [the King of Sparta kicks you into a
+pit][sparta].
+
+[sparta]:http://www.youtube.com/watch?v=-qR0Uke2XNI
 
 Another option is to integrate a CMS into your Rails app. But in
 addition to adding a mass of dependencies and code bloat, this approach
