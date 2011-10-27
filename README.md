@@ -22,10 +22,6 @@ edit page.
 
 You can also create and delete front-end files on the fredit edit page.
 
-**NOTE: Currently only the ERB Rails template handler is supported.**
-You are welcome to fork and add support for Haml and other template
-handlers. 
-
 
 ## fredit lowers the barriers to collaboration
 
@@ -94,7 +90,8 @@ lower the "collaboration barrier" to reap further gains in productivity.
 
 ## Install and setup
 
-fredit requires Rails 3.
+fredit requires Rails 3. fredit should work with all Rails-compatible
+templating engines as of version 0.2.0.
 
 fredit works best as a gem you include in a specific Rails
 environment. Put something like this in the `Gemfile` of your Rails app:
