@@ -47,3 +47,22 @@ https://github.com/ajaxorg/ace/pull/184
 
 https://github.com/ajaxorg/ace/wiki/Embedding---API
 
+
+
+http://jonswope.com/2010/07/25/rails-3-engines-plugins-and-static-assets/ 
+  comment 9
+
+initializer “static assets” do |app|
+  system(“ln -nfs #{root}/public/stylesheets/* #{app.root}/public/stylesheets/”)
+  system(“ln -nfs #{root}/public/javascripts/* #{app.root}/public/javascripts/”)
+end
+
+
+I moved my ::ActionDispatch::Static middleware up in the rack stack.
+Instead of app.middleware.use (as Jon has suggested, above) I inserted
+my engine’s static-serving middleware near the top of the rack stack
+with
+
+  app.middleware.insert_before ::Rack::Lock, ::ActionDispatch::Static, “#{root}/public” 
+
+
