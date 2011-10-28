@@ -31,7 +31,7 @@ module Fredit
   def editables
     css = entries('public/stylesheets/**/*.css')
     js = entries('public/javascripts/**/*.js')
-    views = entries('app/views/**/*.html.{erb,haml}')
+    views = entries('app/views/**/*.html.*')
     {:css => css, :views => views, :javascript => js}
   end
 
