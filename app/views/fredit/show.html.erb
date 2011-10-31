@@ -23,58 +23,58 @@
   </script>
 <% end %>
 
-  <form id="sourceEditor" action="<%= fredit_path %>" method="post">
-    <input name="_method" type="hidden" value="put" />
-    <input name="utf8" type="hidden" value="&#x2713;" />
-    <input type="hidden" name="file" value="<%=@path%>"/>
+<form id="sourceEditor" action="<%= fredit_path %>" method="post">
+  <input name="_method" type="hidden" value="put" />
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input type="hidden" name="file" value="<%=@path%>"/>
 
-    <div id='sourceEditBox' name='source'><%= @source %></div>
+  <div id='sourceEditBox' name='source'><%= @source %></div>
 
-    <table>
-      <tr>
-        <td>File:</td>
-        <td>
-          <%= @path %>
-        </td>
-      </tr>
-      <tr>
-        <td>Edit Message (optional):</td>
-        <td>
-          <input type="text" name="edit_message" value="" placeholder="Describe the edit " size="50"/>
-        </td>
-      </tr>
-      <tr>
-        <td>Edited By (required): </td>
-        <td>
-          <input type="text" name="commit_author" value="<%=session[:commit_author]%>" placeholder="Your Name <yourname@example.com>" size="50"/>
-        </td>
-      </tr>
-      <tr>
-        <td>Action:</td>
-        <td>
-          <input hidden="text" name="file_path" value="<%=@path%>" />
-          <input type="submit" name="commit" value="update this file"/>
-          <input id="deleteBtn" type="submit" name="commit" value="delete this file"/>
-        </td>
-      </tr>
-    </table>
-  </form>
+  <table>
+    <tr>
+      <td>File:</td>
+      <td>
+        <%= @path %>
+      </td>
+    </tr>
+    <tr>
+      <td>Edit Message (optional):</td>
+      <td>
+        <input type="text" name="edit_message" value="" placeholder="Describe the edit " size="50"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Edited By (required): </td>
+      <td>
+        <input type="text" name="commit_author" value="<%=session[:commit_author]%>" placeholder="Your Name <yourname@example.com>" size="50"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Action:</td>
+      <td>
+        <input hidden="text" name="file_path" value="<%=@path%>" />
+        <input type="submit" name="commit" value="update this file"/>
+        <input id="deleteBtn" type="submit" name="commit" value="delete this file"/>
+      </td>
+    </tr>
+  </table>
+</form>
 
-  <form id="createFileForm" action="<%= fredit_path %>" method="post">
-    <table>
-      <tr>
-        <td>Create file at path:</td>
-        <td>
-          <input type="text" name="new_file" value="" placeholder="<%=Fredit.editables[:views].first%>" size="50"/>
-        </td>
-      </tr>
-      <tr>
-        <td>Action:</td>
-        <td>
-          <input type="submit" name="commit" value="create file"/>
-        </td>
-      </tr>
-    </table>
-  </form>
+<form id="createFileForm" action="<%= fredit_path %>" method="post">
+  <table>
+    <tr>
+      <td>Create file at path:</td>
+      <td>
+        <input type="text" name="new_file" value="" placeholder="<%=Fredit.editables[:views].first%>" size="50"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Action:</td>
+      <td>
+        <input type="submit" name="commit" value="create file"/>
+      </td>
+    </tr>
+  </table>
+</form>
 
 
