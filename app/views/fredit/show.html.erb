@@ -23,6 +23,8 @@
   </script>
 <% end %>
 
+<hr/>
+
 <form id="sourceEditor" action="<%= fredit_path %>" method="post">
   <input name="_method" type="hidden" value="put" />
   <input name="utf8" type="hidden" value="&#x2713;" />
@@ -76,5 +78,36 @@
     </tr>
   </table>
 </form>
+<hr/>
 
+<form id="uploadFileForm" action="/fredit/upload" method="post" enctype='multipart/form-data'>
+  <input hidden="text" name="file_path" value="<%=@path%>" />
+  <table>
+    <tr>
+      <td>Upload file to application directory:</td>
+      <td>
+        <input type="text" name="target_dir" value="public/images" size="50"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Select file to upload:</td>
+      <td>
+        <input type="file" name="upload_file" />
+      </td>
+    </tr>
+    <tr>
+      <td>Uploaded By (required): </td>
+      <td>
+        <input type="text" name="commit_author" value="<%=session[:commit_author]%>" placeholder="Your Name <yourname@example.com>" size="50"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Action:</td>
+      <td>
+        <input type="submit" name="upload" value="upload file"/>
+      </td>
+    </tr>
+  </table>
+</form>
 
+<br/>

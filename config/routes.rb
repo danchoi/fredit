@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get 'fredit' => "fredit#show"
   put 'fredit' => "fredit#update"
   post 'fredit' => "fredit#create"
+  post 'fredit/upload' => "fredit#upload"
 end
 

@@ -1,4 +1,5 @@
 require 'git'
+require 'fileutils'
 
 class FreditController < ::ApplicationController
   skip_before_filter :verify_authenticity_token
@@ -60,6 +61,33 @@ class FreditController < ::ApplicationController
     File.open(@path, 'w') {|f| f.write("REPLACE WITH CONTENT")}
     flash[:notice] = "Created new file: #@path"
     redirect_to fredit_path(:file => @path)
+  end
+
+  def upload
+    @path = secure_path params[:file_path]
+    upload = params[:upload_file]  
+    if !upload.respond_to?(:original_filename)
+      flash[:notice] = "You need to choose a file to upload"
+      redirect_to fredit_path(file: @path)
+      return
+    end
+    filename = upload.original_filename
+    upload_dir = secure_path( params[:target_dir] || 'public/images' )
+    FileUtils::mkdir_p upload_dir
+    upload_path = File.join(upload_dir, filename)
+    File.open(upload_path, 'wb') {|f| f.write(upload.read)}
+    flash[:notice] = "File successfully uploaded to #{upload_path}"
+    system %Q|git add #{upload_path}|
+    author = session[:commit_author] = (params[:commit_author] || '').gsub(/[^\w@<>. ]/, '') 
+    if author.blank?
+      flash[:notice] = "Uploaded By must not be blank"
+      redirect_to :back
+      return
+    end
+    cmd = %Q|git commit --author='#{author}' -m 'added #{filename}' #{upload_path}|
+    logger.debug cmd
+    res = system cmd
+    redirect_to fredit_path(@path)
   end
 
   def revision
