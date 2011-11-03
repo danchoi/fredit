@@ -79,7 +79,7 @@ form#createFileForm {
     <% end %>
 
     <section id="editor">
-      <h1 id="appName">fredit <em>front-end edit</em></h1>
+      <h1 id="appName">fredit <em>front-end edit</em> <small>(<%=Fredit::VERSION%>)</h1>
       <form id="fileSelector" action="<%=fredit_path%>">
         <select id="fileSelectorDropDown" name="file">
           <% Fredit.editables.each_pair do |k, v| %>

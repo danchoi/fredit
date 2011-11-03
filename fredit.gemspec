@@ -1,10 +1,11 @@
-# Provide a simple gemspec so you can easily use your enginex
-# project in your rails apps through git.
+$:.unshift File.join(File.dirname(__FILE__), 'lib')
+require 'fredit/version'
+
 Gem::Specification.new do |s|
   s.name = "fredit"
   s.description = "Edit the front end of Rails apps through the browser."
   s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.md"]
-  s.version = "0.2.6"
+  s.version = Fredit::VERSION
   s.summary = s.description
   s.authors = ["Daniel Choi"]
   s.email = ["dhchoi@gmail.com"]

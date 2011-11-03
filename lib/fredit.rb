@@ -1,3 +1,4 @@
+require 'fredit/version'
 if Rails.version < '3.1.0'
   require 'fredit/template30'
 else

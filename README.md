@@ -36,15 +36,15 @@ person. Let's call this person "Chad." Chad:
 * can use a web browser interface to edit files
 
 One option here is to set up a full Rails development environment on
-Chad's computer. But this option sucks for several reasons. Chad is not
-very familiar with the command line, git, RVM, Ruby, rake, bundler, or
-you name it. To get Chad started, I would have to install a thousand and
-one dependencies on Chad's computer. I would have to tutor Chad on
-dozens of rails, bundler, gem, rake, git, and other command line
-incantations.  All this just so Chad can tweak the frackin view
-templates and stylesheets. This is madness. And if you want to add
-additional non-Rails people as front-end collaborators, [the King of
-Sparta kicks you into a pit][sparta]. Have fun.
+Chad's computer. But this brings pain. Chad is not very familiar with
+the command line, git, RVM, Ruby, rake, bundler, or you name it. To get
+Chad started, I would have to install a thousand and one dependencies on
+Chad's computer. I would have to tutor Chad on dozens of rails, bundler,
+gem, rake, git, and other command line incantations.  All this just so
+Chad can tweak the frackin view templates and stylesheets. This is
+madness. And if you want to add additional non-Rails people as front-end
+collaborators, [the King of Sparta kicks you into a pit][sparta]. Have
+fun.
 
 [sparta]:http://www.youtube.com/watch?v=wDiUG52ZyHQ&t=38s
 
@@ -61,31 +61,6 @@ or she can access through a web browser.  This fredit-able instance can
 have its own Rails environment, database, and git branch. You probably
 put a copy of your app on a staging server anyway, so you can use that
 instance for fredit-ing.
-
-## The ideal Ruby templating system is other people
-
-It's becoming less and less sustainable to have Rails programmers serve
-as gatekeepers and bottlenecks through which all markup and source code
-must pass.  We should be searching for ways to allow people with a even
-just little bit of Ruby, HTML, JavaScript, and CSS knowledge to take
-some of the workload off our broad but still finite programming
-shoulders.  
-
-Instead of looking for the next Haml or Slim or Sass, which shaves off
-yet another 0.5 percent of superfluous typing from your template and css
-typing sessions, isn't it better to make it easier for OTHER PEOPLE,
-EVEN NON-RAILS EXPERTS, to write and maintain the view layer for you?
-Who knows, they might even find it fun and educational.
-
-More compact DSLs are not the only way to increase programmer happiness
-and productivity. Another way is to achieve a more productive division
-of labor with those who aren't full-stack web dev ninjas or perhaps not
-even "real" programmers but who are available and willing to help.
-Think [comparative advantage][comparative] from your college economics
-class. We need to apply this idea more to software development.  Let's
-lower the "collaboration barrier" to reap further gains in productivity.
-
-[comparative]:http://www.econlib.org/library/Topics/Details/comparativeadvantage.html
 
 
 ## Install and setup
