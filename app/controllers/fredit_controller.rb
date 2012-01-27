@@ -15,6 +15,10 @@ class FreditController < ::ApplicationController
     @path ||= secure_path(params[:file] || Fredit.editables[:views].first)
     load_git_log
     @source = File.read(Rails.root + @path)
+  rescue 
+    # to force the backtrace out into the rails log
+    puts $!.backtrace
+    raise
   end
 
   def update
