@@ -26,12 +26,13 @@ module Fredit
   end
 
   def entries(glob)
-    Dir[Rails.root + glob].entries.map {|e| rel_path(e)}
+    Dir[glob].entries.map {|e| rel_path(e)}
   end
 
   def editables
-    css = entries('public/**/*.css') 
-    js = entries('public/**/*.js')
+    prefix = File.directory?(Rails.root + 'app/assets') ? 'app/assets' : 'public'
+    css = entries(prefix + '/stylesheets/*') 
+    js = entries(prefix + '/javascripts/*')
     views = entries('app/views/**/*.html.*')
     {:css => css, :views => views, :javascript => js}
   end
