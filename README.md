@@ -35,26 +35,14 @@ person. Let's call this person "Chad." Chad:
   constructs found in ERB after a few minutes of explanation 
 * can use a web browser interface to edit files
 
-One option here is to set up a full Rails development environment on
-Chad's computer. But this brings pain. Chad is not very familiar with
-the command line, git, RVM, Ruby, rake, bundler, or you name it. To get
-Chad started, I would have to install a thousand and one dependencies on
-Chad's computer. I would have to tutor Chad on dozens of rails, bundler,
-gem, rake, git, and other command line incantations.  All this just so
-Chad can tweak the frackin view templates and stylesheets. This is
-madness. And if you want to add additional non-Rails people as front-end
-collaborators, [the King of Sparta kicks you into a pit][sparta]. Have
-fun.
+Setting up a full Rails development environment on
+Chad's computer can be a pain. 
 
-[sparta]:http://www.youtube.com/watch?v=wDiUG52ZyHQ&t=38s
+Another option is to integrate a CMS into your Rails app. But this adds
+dependencies and code bloat. 
 
-Another option is to integrate a CMS into your Rails app. But in
-addition to adding a mass of dependencies and code bloat, this approach
-is too restrictive when you want to give your collaborator as much
-control over the front-end as he or she can handle.
-
-**fredit helps you empower capable non-Rails programmers to help you on
-the front-end of a Rails app, with less overhead.** 
+fredit is another option. It lets capable non-Rails programmers to help you on
+the front-end of a Rails app, with minimal overhead.
 
 Just run a fredit-enabled instance of your Rails app on a server that he
 or she can access through a web browser.  This fredit-able instance can
